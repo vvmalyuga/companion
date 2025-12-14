@@ -273,6 +273,125 @@ button:hover {
     margin-bottom: 1rem;
 }
 
+/* ===== ГРАФИК РАЗВИТИЯ ===== */
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.chart {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    min-height: 300px;
+}
+
+.chart-title {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #2c6cb0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.chart-content {
+    display: flex;
+    height: 250px;
+    position: relative;
+}
+
+.chart-bars {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 80px;
+}
+
+.bar {
+    width: 40px;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease;
+}
+
+.bar.users {
+    background: #4a90e2;
+}
+
+.bar.meetings {
+    background: #28a745;
+}
+
+.bar.revenue {
+    background: #ffc107;
+}
+
+.bar-label {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.chart-scale {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem 0;
+    width: 40px;
+    border-right: 2px solid #ddd;
+    margin-right: 1rem;
+}
+
+.scale {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.chart-info {
+    background: #f0f7ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2;
+}
+
+.chart-info p {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c6cb0;
+}
+
+.chart-info ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.chart-info li {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
 /* ===== ДИАГРАММЫ ===== */
 .diagram-summary {
     display: flex;
@@ -315,6 +434,40 @@ button:hover {
     font-weight: bold;
 }
 
+.diagram-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.diagram-content img {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.diagram-description {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2;
+}
+
+.class-list, .object-examples, .components,
+.deployment-nodes, .queues, .variables {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.class-item, .object-item, .component,
+.node, .queue, .variable {
+    background: #f0f7ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #d1e3ff;
+}
+
 /* ===== PRE и CODE ===== */
 pre, code {
     font-family: 'Consolas', 'Monaco', monospace;
@@ -349,59 +502,6 @@ code {
     border-radius: 8px;
     margin: 1.5rem 0;
     border: 1px solid #eee;
-}
-
-/* ===== ГРАФИК ===== */
-.chart-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.chart {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 8px;
-    position: relative;
-}
-
-.chart-bars {
-    display: flex;
-    height: 200px;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 0 2rem;
-    margin-bottom: 1rem;
-}
-
-.bar-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bar {
-    width: 40px;
-    border-radius: 4px 4px 0 0;
-}
-
-.bar.users { background: #4a90e2; height: 60%; }
-.bar.meetings { background: #28a745; height: 40%; }
-.bar.revenue { background: #ffc107; height: 30%; }
-
-.chart-scale {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem 0;
-    font-size: 0.8rem;
-    color: #666;
-    width: 40px;
 }
 
 /* ===== ИЕРАРХИЯ ===== */
@@ -494,14 +594,46 @@ footer {
         text-align: center;
     }
     
-    .chart-container {
-        grid-template-columns: 1fr;
+    .chart-content {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .chart-bars {
+        flex-direction: row;
+        height: 200px;
+        padding: 1rem;
+    }
+    
+    .bar-group {
+        width: 60px;
+    }
+    
+    .bar {
+        width: 30px;
+    }
+    
+    .chart-scale {
+        flex-direction: row;
+        width: 100%;
+        height: 40px;
+        border-right: none;
+        border-top: 2px solid #ddd;
+        padding: 0.5rem 1rem;
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+    
+    .scale {
+        text-align: center;
+        padding-right: 0;
     }
     
     .stats-grid, .features, .links-grid, .tech-stack,
     .payment-model, .security-features, .testing-grid,
     .frame-types, .additional-frames, .benefits,
-    .hierarchy {
+    .hierarchy, .class-list, .object-examples, .components,
+    .deployment-nodes, .queues, .variables {
         grid-template-columns: 1fr;
     }
     
@@ -512,14 +644,6 @@ footer {
     .diagram-header {
         flex-direction: column;
         align-items: flex-start;
-    }
-    
-    .chart-bars {
-        padding: 0 1rem;
-    }
-    
-    .bar {
-        width: 30px;
     }
 }
 
@@ -539,5 +663,17 @@ footer {
     table {
         display: block;
         overflow-x: auto;
+    }
+    
+    .chart-bars {
+        padding: 0.5rem;
+    }
+    
+    .bar {
+        width: 25px;
+    }
+    
+    .bar-group {
+        width: 50px;
     }
 }
