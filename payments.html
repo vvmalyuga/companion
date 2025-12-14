@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Компаньон — Платежная система</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Платежная система и транзакции</h1>
+  <nav>
+    <a href="main.html">Главная</a> |
+    <a href="about.html">О проекте</a> |
+    <a href="tz.html">ТЗ</a> |
+    <a href="uml.html">UML</a> |
+    <a href="frames.html">Фрейм-модели</a> |
+    <a href="implementation.html">Реализация</a> |
+    <a href="payments.html">Платежи</a> |
+    <a href="index.html">Выйти</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Модель монетизации</h2>
+    <div class="payment-model">
+      <div class="model-card">
+        <h3>Для заказчиков</h3>
+        <ul>
+          <li><strong>Бесплатно:</strong> Поиск, просмотр профилей</li>
+          <li><strong>Премиум-подписка:</strong> 299₽/месяц</li>
+          <li><strong>Приоритет в поиске</strong></li>
+          <li><strong>Расширенные фильтры</strong></li>
+          <li><strong>Неограниченные запросы</strong></li>
+        </ul>
+      </div>
+      <div class="model-card">
+        <h3>Для компаньонов</h3>
+        <ul>
+          <li><strong>Комиссия платформы:</strong> 15% от суммы встречи</li>
+          <li><strong>Премиум-профиль:</strong> 499₽/месяц</li>
+          <li><strong>Верификация:</strong> Бесплатно</li>
+          <li><strong>Вывод средств:</strong> 1-3 рабочих дня</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Схема транзакций</h2>
+    <img src="./diagrams/payment_flow.png" alt="Схема платежей" style="width: 100%; max-width: 800px;">
+    <ol class="payment-steps">
+      <li>Заказчик выбирает компаньона и время</li>
+      <li>Система рассчитывает стоимость (услуга + комиссия)</li>
+      <li>Оплата через интегрированный платежный шлюз</li>
+      <li>Деньжи резервируются на счету платформы</li>
+      <li>После успешной встречи средства переводятся компаньону (минус комиссия)</li>
+      <li>Заказчик может оставить отзыв и оценку</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Безопасность платежей</h2>
+    <div class="security-features">
+      <div class="feature">
+        <h4>SSL/TLS шифрование</h4>
+        <p>Все данные передаются по HTTPS</p>
+      </div>
+      <div class="feature">
+        <h4>PCI DSS совместимость</h4>
+        <p>Стандарт безопасности индустрии платежных карт</p>
+      </div>
+      <div class="feature">
+        <h4>3D Secure 2.0</h4>
+        <p>Двухфакторная аутентификация для карт</p>
+      </div>
+      <div class="feature">
+        <h4>Регулярный аудит</h4>
+        <p>Ежеквартальные проверки безопасности</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Интегрированные платежные системы</h2>
+    <ul>
+      <li><strong>Банковские карты:</strong> Visa, MasterCard, МИР</li>
+      <li><strong>Электронные кошельки:</strong> ЮMoney, QIWI</li>
+      <li><strong>Мобильные платежи:</strong> Apple Pay, Google Pay</li>
+      <li><strong>Банковские переводы:</strong> СБП, Тинькофф, Сбер</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Финансовые отчеты и аналитика</h2>
+    <table class="financial-table">
+      <thead>
+        <tr>
+          <th>Показатель</th>
+          <th>Значение</th>
+          <th>Прогноз</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Средний чек</td>
+          <td>1 200 ₽</td>
+          <td>1 500 ₽</td>
+        </tr>
+        <tr>
+          <td>Комиссия платформы</td>
+          <td>15%</td>
+          <td>12-18%</td>
+        </tr>
+        <tr>
+          <td>Ежемесячный оборот</td>
+          <td>800 000 ₽</td>
+          <td>2 500 000 ₽</td>
+        </tr>
+        <tr>
+          <td>Количество транзакций</td>
+          <td>600/мес</td>
+          <td>1 800/мес</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Юридические аспекты</h2>
+    <ul>
+      <li>Договор публичной оферты для пользователей</li>
+      <li>Соглашение на обработку персональных данных</li>
+      <li>Лицензия на осуществление платежных операций</li>
+      <li>Налоговые отчисления (НДФЛ 13% для компаньонов)</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 Компаньон | Платежная система</p>
+    <p>Все транзакции защищены и зашифрованы</p>
+  </div>
+</footer>
+</body>
+</html>
