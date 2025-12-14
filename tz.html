@@ -1,576 +1,466 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Компаньон — Техническое задание</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компаньон — Техническое задание</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Техническое задание — Компаньон</h1>
-  <nav>
-  <a href="about.html">Главная</a> |
-  <a href="tz.html">ТЗ</a> |
-  <a href="uml.html">UML</a> |
-  <a href="frames.html">Фрейм-модели</a> |
-  <a href="implementation.html">Реализация</a> |
-  <a href="payments.html">Платежи</a> |
-  <a href="index.html">Выйти</a>
-</nav>
-</header>
+    <header>
+        <div class="header-content">
+            <h1>Техническое задание</h1>
+            <nav>
+                <a href="about.html">Главная</a>
+                <a href="tz.html" class="active">ТЗ</a>
+                <a href="uml.html">UML</a>
+                <a href="frames.html">Фрейм-модели</a>
+                <a href="implementation.html">Реализация</a>
+                <a href="payments.html">Платежи</a>
+                <a href="index.html" class="logout">Выйти</a>
+            </nav>
+        </div>
+    </header>
 
-<main>
-  <section class="tz-intro">
-    <h2>Техническое задание на разработку веб-сервиса «Компаньон»</h2>
-    <p><strong>Автор:</strong> Малюга Валерия Васильевна</p>
-    <p><strong>Группа:</strong> НФИбд-01-23</p>
-    <p><strong>Номер зачетки:</strong> 1132236050</p>
-    <p><strong>Дата создания:</strong> 2025 год</p>
-  </section>
+    <main>
+        <!-- Информация о ТЗ -->
+        <section class="document-info">
+            <h2>Техническое задание на разработку веб-сервиса «Компаньон»</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Автор:</strong> Малюга Валерия Васильевна
+                </div>
+                <div class="info-item">
+                    <strong>Группа:</strong> НФИбд-01-23
+                </div>
+                <div class="info-item">
+                    <strong>Номер зачетки:</strong> 1132236050
+                </div>
+                <div class="info-item">
+                    <strong>Дата создания:</strong> 2025 год
+                </div>
+            </div>
+        </section>
 
-  <section>
-    <h2>Содержание</h2>
-    <ol class="toc">
-      <li><a href="#section1">1. Общие сведения</a></li>
-      <li><a href="#section2">2. Функциональные требования</a></li>
-      <li><a href="#section3">3. Технические требования</a></li>
-      <li><a href="#section4">4. Дизайн и интерфейс</a></li>
-      <li><a href="#section5">5. Безопасность и аутентификация</a></li>
-      <li><a href="#section6">6. Моделирование системы</a></li>
-      <li><a href="#section7">7. Жизненный цикл системы</a></li>
-      <li><a href="#section8">8. Сроки и этапы разработки</a></li>
-      <li><a href="#section9">9. Результат</a></li>
-    </ol>
-  </section>
+        <!-- Оглавление -->
+        <section class="toc-section">
+            <h2>Содержание</h2>
+            <ol class="toc">
+                <li><a href="#section1">Общие сведения</a></li>
+                <li><a href="#section2">Функциональные требования</a></li>
+                <li><a href="#section3">Технические требования</a></li>
+                <li><a href="#section4">Дизайн и интерфейс</a></li>
+                <li><a href="#section5">Безопасность</a></li>
+                <li><a href="#section6">Моделирование</a></li>
+                <li><a href="#section7">Жизненный цикл</a></li>
+                <li><a href="#section8">Сроки разработки</a></li>
+                <li><a href="#section9">Результат</a></li>
+            </ol>
+        </section>
 
-  <section id="section1">
-    <h2>1. Общие сведения</h2>
-    <p>Веб-сервис «Компаньон» представляет собой онлайн-платформу для поиска компании для прогулок, общения и участия в различных мероприятиях. Система ориентирована на пользователей, которым нужна компания, и тех, кто готов её предоставить в качестве компаньона.</p>
-    
-    <h3>Основные характеристики:</h3>
-    <ul>
-      <li><strong>Тип:</strong> Веб-сервис с элементами социальной сети</li>
-      <li><strong>Архитектура:</strong> Клиент-серверная, SPA (Single Page Application)</li>
-      <li><strong>Масштабируемость:</strong> Поддержка от 100 до 10 000 пользователей</li>
-      <li><strong>Доступность:</strong> 24/7 с плановыми техническими работами</li>
-      <li><strong>Язык интерфейса:</strong> Русский (планируется английский)</li>
-    </ul>
-  </section>
+        <!-- Раздел 1 -->
+        <section id="section1" class="content-section">
+            <h2>1. Общие сведения</h2>
+            <p>Веб-сервис «Компаньон» представляет собой онлайн-платформу для поиска компании для прогулок, общения и мероприятий.</p>
+            
+            <div class="characteristics">
+                <h3>Основные характеристики:</h3>
+                <ul>
+                    <li><strong>Тип:</strong> Веб-сервис с элементами социальной сети</li>
+                    <li><strong>Архитектура:</strong> Клиент-серверная, SPA</li>
+                    <li><strong>Масштабируемость:</strong> Поддержка от 100 до 10 000 пользователей</li>
+                    <li><strong>Доступность:</strong> 24/7</li>
+                    <li><strong>Язык интерфейса:</strong> Русский</li>
+                </ul>
+            </div>
+        </section>
 
-  <section id="section2">
-    <h2>2. Функциональные требования</h2>
-    
-    <h3>2.1. Пользовательские роли</h3>
-    <table class="roles-table">
-      <thead>
-        <tr>
-          <th>Роль</th>
-          <th>Описание</th>
-          <th>Права и возможности</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Заказчик</strong></td>
-          <td>Пользователь, ищущий компанию</td>
-          <td>
-            <ul>
-              <li>Поиск компаньонов</li>
-              <li>Бронирование встреч</li>
-              <li>Оставление отзывов</li>
-              <li>Оплата услуг</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Компаньон</strong></td>
-          <td>Пользователь, предоставляющий услуги компании</td>
-          <td>
-            <ul>
-              <li>Создание анкеты</li>
-              <li>Управление расписанием</li>
-              <li>Прием заявок</li>
-              <li>Получение оплаты</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td><strong>Администратор</strong></td>
-          <td>Управляющий системой</td>
-          <td>
-            <ul>
-              <li>Модерация пользователей</li>
-              <li>Управление контентом</li>
-              <li>Техническая поддержка</li>
-              <li>Аналитика</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+        <!-- Раздел 2 -->
+        <section id="section2" class="content-section">
+            <h2>2. Функциональные требования</h2>
+            
+            <h3>2.1. Пользовательские роли</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Роль</th>
+                        <th>Описание</th>
+                        <th>Права</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Заказчик</strong></td>
+                        <td>Ищет компанию</td>
+                        <td>Поиск, бронирование, отзывы</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Компаньон</strong></td>
+                        <td>Предоставляет услуги</td>
+                        <td>Анкета, расписание, заявки</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Администратор</strong></td>
+                        <td>Управляет системой</td>
+                        <td>Модерация, управление, аналитика</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h3>2.2. Основные функциональные модули</h3>
-    <div class="modules-grid">
-      <div class="module-card">
-        <h4>Модуль 1: Регистрация и авторизация</h4>
-        <ul>
-          <li>Создание аккаунта с выбором роли</li>
-          <li>Подтверждение e-mail и телефона</li>
-          <li>Восстановление пароля</li>
-          <li>Двухфакторная аутентификация</li>
-        </ul>
-      </div>
-      <div class="module-card">
-        <h4>Модуль 2: Профиль пользователя</h4>
-        <ul>
-          <li>Заполнение анкеты с интересами</li>
-          <li>Загрузка фотографий (до 5 шт.)</li>
-          <li>Верификация личности</li>
-          <li>Настройки приватности</li>
-        </ul>
-      </div>
-      <div class="module-card">
-        <h4>Модуль 3: Поиск и каталог</h4>
-        <ul>
-          <li>Фильтры: категории, теги, цена, рейтинг</li>
-          <li>Геолокационный поиск</li>
-          <li>Сохраненные поисковые запросы</li>
-          <li>AI-рекомендации</li>
-        </ul>
-      </div>
-      <div class="module-card">
-        <h4>Модуль 4: Бронирование</h4>
-        <ul>
-          <li>Выбор даты и времени</li>
-          <li>Подтверждение/отклонение заявок</li>
-          <li>Календарь встреч</li>
-          <li>Напоминания и уведомления</li>
-        </ul>
-      </div>
-      <div class="module-card">
-        <h4>Модуль 5: Коммуникация</h4>
-        <ul>
-          <li>Встроенный чат с историей</li>
-          <li>Аудио/видеозвонки (планируется)</li>
-          <li>Шаблоны сообщений</li>
-          <li>Модерация переписки</li>
-        </ul>
-      </div>
-      <div class="module-card">
-        <h4>Модуль 6: Платежи</h4>
-        <ul>
-          <li>Оплата банковскими картами</li>
-          <li>Электронные кошельки</li>
-          <li>Вывод средств для компаньонов</li>
-          <li>Система возвратов</li>
-        </ul>
-      </div>
-      <div class="module-card">
-        <h4>Модуль 7: Рейтинги и отзывы</h4>
-        <ul>
-          <li>Пятизвездочная система оценок</li>
-          <li>Текстовые отзывы с модерацией</li>
-          <li>Ответы на отзывы</li>
-          <li>Рейтинговая таблица</li>
-        </ul>
-      </div>
-      <div class="module-card">
-        <h4>Модуль 8: Администрирование</h4>
-        <ul>
-          <li>Панель управления</li>
-          <li>Статистика и аналитика</li>
-          <li>Управление пользователями</li>
-          <li>Настройки системы</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+            <h3>2.2. Основные модули</h3>
+            <div class="modules">
+                <div class="module">
+                    <h4>Регистрация и авторизация</h4>
+                    <ul>
+                        <li>Создание аккаунта с выбором роли</li>
+                        <li>Подтверждение e-mail и телефона</li>
+                        <li>Восстановление пароля</li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <h4>Профиль пользователя</h4>
+                    <ul>
+                        <li>Заполнение анкеты с интересами</li>
+                        <li>Загрузка фотографий</li>
+                        <li>Верификация личности</li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <h4>Поиск и каталог</h4>
+                    <ul>
+                        <li>Фильтры: категории, теги, цена</li>
+                        <li>Геолокационный поиск</li>
+                        <li>AI-рекомендации</li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <h4>Бронирование</h4>
+                    <ul>
+                        <li>Выбор даты и времени</li>
+                        <li>Подтверждение/отклонение</li>
+                        <li>Календарь встреч</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <section id="section3">
-    <h2>3. Технические требования</h2>
-    
-    <h3>3.1. Фронтенд</h3>
-    <ul>
-      <li><strong>Технологии:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
-      <li><strong>Архитектура:</strong> SPA с hash-маршрутизацией</li>
-      <li><strong>Библиотеки:</strong> Vue.js или React (легковесные варианты)</li>
-      <li><strong>Адаптивность:</strong> Mobile-first подход</li>
-      <li><strong>Производительность:</strong> Загрузка страницы ≤ 2 сек</li>
-    </ul>
+        <!-- Раздел 3 -->
+        <section id="section3" class="content-section">
+            <h2>3. Технические требования</h2>
+            
+            <div class="tech-requirements">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>SPA-архитектура</li>
+                        <li>Адаптивная верстка</li>
+                        <li>Загрузка страницы ≤ 2 сек</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Backend (планируется)</h3>
+                    <ul>
+                        <li>Node.js с Express.js</li>
+                        <li>REST API архитектура</li>
+                        <li>JWT аутентификация</li>
+                        <li>WebSocket для чата</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>Базы данных</h3>
+                    <ul>
+                        <li>PostgreSQL (реляционная)</li>
+                        <li>MongoDB (документная)</li>
+                        <li>Redis (кэширование)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <h3>3.2. Бэкенд (планируется)</h3>
-    <ul>
-      <li><strong>Сервер:</strong> Node.js с Express или Python с FastAPI</li>
-      <li><strong>API:</strong> RESTful архитектура</li>
-      <li><strong>Аутентификация:</strong> JWT токены</li>
-      <li><strong>Кэширование:</strong> Redis для сессий</li>
-    </ul>
+        <!-- Раздел 4 -->
+        <section id="section4" class="content-section">
+            <h2>4. Дизайн и интерфейс</h2>
+            
+            <h3>4.1. Дизайн-система</h3>
+            <div class="design-system">
+                <div class="colors">
+                    <h4>Цветовая палитра:</h4>
+                    <div class="color-grid">
+                        <div class="color-sample" style="background: #4a90e2;">
+                            <span>Основной</span>
+                            <span>#4a90e2</span>
+                        </div>
+                        <div class="color-sample" style="background: #2c6cb0;">
+                            <span>Акцентный</span>
+                            <span>#2c6cb0</span>
+                        </div>
+                        <div class="color-sample" style="background: #f8f9fa; color: #333;">
+                            <span>Фон</span>
+                            <span>#f8f9fa</span>
+                        </div>
+                        <div class="color-sample" style="background: #28a745;">
+                            <span>Успех</span>
+                            <span>#28a745</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="typography">
+                    <h4>Типографика:</h4>
+                    <ul>
+                        <li><strong>Основной шрифт:</strong> Arial, sans-serif</li>
+                        <li><strong>Заголовки:</strong> 2.2em, 1.8em, 1.5em</li>
+                        <li><strong>Текст:</strong> 16px, межстрочный интервал 1.6</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <h3>3.3. Базы данных</h3>
-    <table class="db-table">
-      <thead>
-        <tr>
-          <th>Тип данных</th>
-          <th>База данных</th>
-          <th>Схема</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Пользователи, заказы</td>
-          <td>PostgreSQL</td>
-          <td>Реляционная схема с внешними ключами</td>
-        </tr>
-        <tr>
-          <td>Отзывы, чаты</td>
-          <td>MongoDB</td>
-          <td>Документная модель для гибкости</td>
-        </tr>
-        <tr>
-          <td>Кэш, сессии</td>
-          <td>Redis</td>
-          <td>Key-value хранилище</td>
-        </tr>
-        <tr>
-          <td>Файлы, фото</td>
-          <td>Amazon S3 / Yandex Object Storage</td>
-          <td>Облачное хранилище</td>
-        </tr>
-      </tbody>
-    </table>
+        <!-- Раздел 5 -->
+        <section id="section5" class="content-section">
+            <h2>5. Безопасность</h2>
+            
+            <div class="security-grid">
+                <div class="security-item">
+                    <h4>HTTPS</h4>
+                    <p>Все соединения защищены SSL/TLS</p>
+                </div>
+                <div class="security-item">
+                    <h4>Хеширование паролей</h4>
+                    <p>bcrypt с salt ≥ 12 раундов</p>
+                </div>
+                <div class="security-item">
+                    <h4>Защита от XSS</h4>
+                    <p>Экранирование вывода</p>
+                </div>
+                <div class="security-item">
+                    <h4>Защита от CSRF</h4>
+                    <p>Токены для всех форм</p>
+                </div>
+            </div>
+        </section>
 
-    <h3>3.4. Производительность</h3>
-    <ul>
-      <li>Время отклика API: ≤ 200 мс</li>
-      <li>Время рендеринга страниц: ≤ 300 мс</li>
-      <li>Максимальное количество одновременных пользователей: 1000</li>
-      <li>Доступность системы (uptime): ≥ 99.5%</li>
-    </ul>
-  </section>
+        <!-- Раздел 6 -->
+        <section id="section6" class="content-section">
+            <h2>6. Моделирование системы</h2>
+            
+            <h3>6.1. Функциональность (IDEF0)</h3>
+            <div class="diagram-placeholder">
+                <img src="./diagrams/idef0.png" alt="IDEF0 диаграмма">
+                <p>Контекстная диаграмма верхнего уровня</p>
+            </div>
 
-  <section id="section4">
-    <h2>4. Дизайн и интерфейс</h2>
-    
-    <h3>4.1. Дизайн-система</h3>
-    <div class="design-system">
-      <div class="color-palette">
-        <h4>Цветовая палитра:</h4>
-        <div class="color-sample" style="background: #4a90e2;">Основной: #4a90e2</div>
-        <div class="color-sample" style="background: #2c6cb0;">Акцентный: #2c6cb0</div>
-        <div class="color-sample" style="background: #f8f9fa;">Фон: #f8f9fa</div>
-        <div class="color-sample" style="background: #28a745;">Успех: #28a745</div>
-        <div class="color-sample" style="background: #dc3545;">Ошибка: #dc3545</div>
-      </div>
-      
-      <div class="typography">
-        <h4>Типографика:</h4>
-        <ul>
-          <li><strong>Основной шрифт:</strong> Arial, sans-serif</li>
-          <li><strong>Заголовки:</strong> 2.2em, 1.8em, 1.5em</li>
-          <li><strong>Текст:</strong> 16px, межстрочный интервал 1.6</li>
-          <li><strong>Мобильные устройства:</strong> Минимум 14px</li>
-        </ul>
-      </div>
-    </div>
+            <h3>6.2. Диаграмма потоков данных (DFD)</h3>
+            <div class="diagram-placeholder">
+                <img src="./diagrams/dfd0.png" alt="DFD Level 0">
+                <p>Диаграмма потоков данных уровня 0</p>
+            </div>
+            
+            <div class="diagram-placeholder">
+                <img src="./diagrams/dfd1.png" alt="DFD Level 1">
+                <p>Диаграмма потоков данных уровня 1</p>
+            </div>
+        </section>
 
-    <h3>4.2. Основные экраны</h3>
-    <ol>
-      <li><strong>Страница входа:</strong> Минималистичный дизайн, форма авторизации</li>
-      <li><strong>Главная страница:</strong> Категории, поиск, рекомендации</li>
-      <li><strong>Каталог компаньонов:</strong> Сетка карточек, фильтры слева</li>
-      <li><strong>Карточка компаньона:</strong> Фото, описание, кнопка бронирования</li>
-      <li><strong>Процесс бронирования:</strong> Пошаговый мастер</li>
-      <li><strong>Личный кабинет:</strong> Вкладки для разных разделов</li>
-      <li><strong>Чат:</strong> Список диалогов справа, переписка слева</li>
-    </ol>
+        <!-- Раздел 7 -->
+        <section id="section7" class="content-section">
+            <h2>7. Жизненный цикл системы</h2>
+            
+            <div class="lifecycle">
+                <div class="phase">
+                    <div class="phase-header">
+                        <span class="phase-number">1</span>
+                        <h3>Планирование и анализ</h3>
+                    </div>
+                    <div class="phase-content">
+                        <ul>
+                            <li>Исследование рынка</li>
+                            <li>Сбор требований</li>
+                            <li>Разработка концепции</li>
+                            <li>Оценка рисков</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-header">
+                        <span class="phase-number">2</span>
+                        <h3>Проектирование</h3>
+                    </div>
+                    <div class="phase-content">
+                        <ul>
+                            <li>Создание UML диаграмм</li>
+                            <li>Проектирование архитектуры</li>
+                            <li>Разработка макетов</li>
+                            <li>Создание прототипов</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-header">
+                        <span class="phase-number">3</span>
+                        <h3>Реализация</h3>
+                    </div>
+                    <div class="phase-content">
+                        <ul>
+                            <li>Frontend разработка</li>
+                            <li>Backend разработка</li>
+                            <li>Интеграция модулей</li>
+                            <li>Математические модели</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-header">
+                        <span class="phase-number">4</span>
+                        <h3>Тестирование</h3>
+                    </div>
+                    <div class="phase-content">
+                        <ul>
+                            <li>Модульное тестирование</li>
+                            <li>Интеграционное тестирование</li>
+                            <li>Нагрузочное тестирование</li>
+                            <li>Тестирование безопасности</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-header">
+                        <span class="phase-number">5</span>
+                        <h3>Внедрение и поддержка</h3>
+                    </div>
+                    <div class="phase-content">
+                        <ul>
+                            <li>Развертывание на сервере</li>
+                            <li>Обучение пользователей</li>
+                            <li>Мониторинг работы</li>
+                            <li>Техническая поддержка</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h3>4.3. Адаптивность</h3>
-    <ul>
-      <li><strong>Десктоп:</strong> ≥ 1200px — полнофункциональный интерфейс</li>
-      <li><strong>Планшет:</strong> 768px-1199px — упрощенная навигация</li>
-      <li><strong>Мобильный:</strong> ≤ 767px — гамбургер-меню, вертикальные списки</li>
-    </ul>
-  </section>
+        <!-- Раздел 8 -->
+        <section id="section8" class="content-section">
+            <h2>8. Сроки разработки</h2>
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Этап</th>
+                        <th>Срок</th>
+                        <th>Результат</th>
+                        <th>Ответственный</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Анализ требований</td>
+                        <td>2 недели</td>
+                        <td>Техническое задание</td>
+                        <td>Аналитик</td>
+                    </tr>
+                    <tr>
+                        <td>Проектирование</td>
+                        <td>2 недели</td>
+                        <td>Диаграммы и макеты</td>
+                        <td>Архитектор</td>
+                    </tr>
+                    <tr>
+                        <td>Frontend разработка</td>
+                        <td>4 недели</td>
+                        <td>Интерфейс пользователя</td>
+                        <td>Frontend разработчик</td>
+                    </tr>
+                    <tr>
+                        <td>Backend разработка</td>
+                        <td>4 недели</td>
+                        <td>API и база данных</td>
+                        <td>Backend разработчик</td>
+                    </tr>
+                    <tr>
+                        <td>Интеграция</td>
+                        <td>2 недели</td>
+                        <td>Рабочий прототип</td>
+                        <td>Fullstack разработчик</td>
+                    </tr>
+                    <tr>
+                        <td>Тестирование</td>
+                        <td>2 недели</td>
+                        <td>Отчет о тестировании</td>
+                        <td>Тестировщик</td>
+                    </tr>
+                    <tr class="total">
+                        <td><strong>Итого</strong></td>
+                        <td><strong>4 месяца</strong></td>
+                        <td><strong>Готовый продукт</strong></td>
+                        <td><strong>Команда</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-  <section id="section5">
-    <h2>5. Безопасность и аутентификация</h2>
-    
-    <h3>5.1. Защита данных</h3>
-    <div class="security-grid">
-      <div class="security-item">
-        <h4>HTTPS</h4>
-        <p>Все соединения защищены SSL/TLS</p>
-      </div>
-      <div class="security-item">
-        <h4>Хеширование паролей</h4>
-        <p>bcrypt с salt ≥ 12 раундов</p>
-      </div>
-      <div class="security-item">
-        <h4>Защита от XSS</h4>
-        <p>Экранирование вывода, Content Security Policy</p>
-      </div>
-      <div class="security-item">
-        <h4>Защита от CSRF</h4>
-        <p>Токены для всех форм</p>
-      </div>
-      <div class="security-item">
-        <h4>SQL-инъекции</h4>
-        <p>Подготовленные выражения, ORM</p>
-      </div>
-      <div class="security-item">
-        <h4>Логирование</h4>
-        <p>Аудит действий пользователей</p>
-      </div>
-    </div>
+        <!-- Раздел 9 -->
+        <section id="section9" class="content-section">
+            <h2>9. Результат</h2>
+            
+            <div class="results">
+                <div class="result-item">
+                    <h3>Техническая документация</h3>
+                    <ul>
+                        <li>Полное техническое задание</li>
+                        <li>Диаграммы UML и DFD</li>
+                        <li>Руководство пользователя</li>
+                        <li>Руководство администратора</li>
+                    </ul>
+                </div>
+                
+                <div class="result-item">
+                    <h3>Исходный код</h3>
+                    <ul>
+                        <li>Frontend приложение</li>
+                        <li>Backend API</li>
+                        <li>Конфигурационные файлы</li>
+                        <li>Скрипты развертывания</li>
+                    </ul>
+                </div>
+                
+                <div class="result-item">
+                    <h3>Математические модели</h3>
+                    <ul>
+                        <li>Сети Петри</li>
+                        <li>Системы массового обслуживания</li>
+                        <li>Системная динамика</li>
+                        <li>AI-модели рекомендаций</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="acceptance">
+                <h3>Критерии приемки:</h3>
+                <ul>
+                    <li>✅ Все функциональные требования реализованы</li>
+                    <li>✅ Система проходит нагрузочное тестирование</li>
+                    <li>✅ Ошибки безопасности не обнаружены</li>
+                    <li>✅ Интерфейс соответствует макетам</li>
+                    <li>✅ Документация полная и понятная</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-    <h3>5.2. Верификация пользователей</h3>
-    <ul>
-      <li><strong>Уровень 1:</strong> E-mail и телефон</li>
-      <li><strong>Уровень 2:</strong> Фото с документом</li>
-      <li><strong>Уровень 3:</strong> Видеоверификация</li>
-      <li><strong>Для компаньонов:</strong> Обязательная верификация уровня 2</li>
-    </ul>
-
-    <h3>5.3. Модерация контента</h3>
-    <ul>
-      <li>Автоматическая фильтрация нецензурной лексики</li>
-      <li>Ручная модерация фотографий профилей</li>
-      <li>Жалобы пользователей обрабатываются в течение 24 часов</li>
-      <li>Система блокировок за нарушения</li>
-    </ul>
-  </section>
-
-  <section id="section6">
-    <h2>6. Моделирование системы</h2>
-    
-    <h3>6.1. Функциональность (IDEF0)</h3>
-    <img src="./diagrams/idef0.png" alt="IDEF0 диаграмма">
-    <p>Контекстная диаграмма верхнего уровня, показывающая основные процессы системы</p>
-
-    <h3>6.2. Диаграмма потоков данных (DFD)</h3>
-    <h4>Уровень 0 (контекстный)</h4>
-    <img src="./diagrams/dfd0.png" alt="DFD Level 0">
-    
-    <h4>Уровень 1 (детализация)</h4>
-    <img src="./diagrams/dfd1.png" alt="DFD Level 1">
-    <p>Детализация основных процессов: регистрация, поиск, бронирование, оплата</p>
-  </section>
-
-  <section id="section7">
-  <h2>7. Жизненный цикл системы</h2>
-  
-  <div class="lifecycle-improved">
-    <div class="lifecycle-phase">
-      <div class="phase-number-title">
-        <span class="phase-number">1</span>
-        <h3>Планирование и анализ</h3>
-      </div>
-      <div class="phase-content">
-        <ul>
-          <li>Исследование рынка и конкурентов</li>
-          <li>Сбор и анализ требований</li>
-          <li>Разработка концепции</li>
-          <li>Оценка рисков</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="lifecycle-phase">
-      <div class="phase-number-title">
-        <span class="phase-number">2</span>
-        <h3>Проектирование</h3>
-      </div>
-      <div class="phase-content">
-        <ul>
-          <li>Создание UML диаграмм</li>
-          <li>Проектирование архитектуры</li>
-          <li>Разработка дизайн-макетов</li>
-          <li>Создание прототипов</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="lifecycle-phase">
-      <div class="phase-number-title">
-        <span class="phase-number">3</span>
-        <h3>Реализация</h3>
-      </div>
-      <div class="phase-content">
-        <ul>
-          <li>Frontend разработка</li>
-          <li>Backend разработка</li>
-          <li>Интеграция модулей</li>
-          <li>Написание математических моделей</li>
-          <li>Разработка AI-компонентов</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="lifecycle-phase">
-      <div class="phase-number-title">
-        <span class="phase-number">4</span>
-        <h3>Тестирование</h3>
-      </div>
-      <div class="phase-content">
-        <ul>
-          <li>Модульное тестирование</li>
-          <li>Интеграционное тестирование</li>
-          <li>Нагрузочное тестирование</li>
-          <li>Тестирование безопасности</li>
-          <li>Юзабилити-тестирование</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="lifecycle-phase">
-      <div class="phase-number-title">
-        <span class="phase-number">5</span>
-        <h3>Внедрение и поддержка</h3>
-      </div>
-      <div class="phase-content">
-        <ul>
-          <li>Развертывание на сервере</li>
-          <li>Обучение пользователей</li>
-          <li>Мониторинг работы</li>
-          <li>Техническая поддержка</li>
-          <li>Обновления и доработки</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="section8">
-    <h2>8. Сроки и этапы разработки</h2>
-    
-    <table class="schedule-table">
-      <thead>
-        <tr>
-          <th>Этап</th>
-          <th>Срок</th>
-          <th>Результат</th>
-          <th>Ответственный</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Анализ требований</td>
-          <td>2 недели</td>
-          <td>Техническое задание</td>
-          <td>Аналитик</td>
-        </tr>
-        <tr>
-          <td>Проектирование</td>
-          <td>2 недели</td>
-          <td>Диаграммы и макеты</td>
-          <td>Архитектор</td>
-        </tr>
-        <tr>
-          <td>Frontend разработка</td>
-          <td>4 недели</td>
-          <td>Интерфейс пользователя</td>
-          <td>Frontend разработчик</td>
-        </tr>
-        <tr>
-          <td>Backend разработка</td>
-          <td>4 недели</td>
-          <td>API и база данных</td>
-          <td>Backend разработчик</td>
-        </tr>
-        <tr>
-          <td>Интеграция</td>
-          <td>2 недели</td>
-          <td>Рабочий прототип</td>
-          <td>Fullstack разработчик</td>
-        </tr>
-        <tr>
-          <td>Тестирование</td>
-          <td>2 недели</td>
-          <td>Отчет о тестировании</td>
-          <td>Тестировщик</td>
-        </tr>
-        <tr>
-          <td>Внедрение</td>
-          <td>1 неделя</td>
-          <td>Рабочая система</td>
-          <td>DevOps инженер</td>
-        </tr>
-        <tr>
-          <td><strong>Итого</strong></td>
-          <td><strong>4 месяца</strong></td>
-          <td><strong>Готовый продукт</strong></td>
-          <td><strong>Команда</strong></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="section9">
-    <h2>9. Результат</h2>
-    
-    <h3>Итоговый продукт включает:</h3>
-    <div class="deliverables">
-      <div class="deliverable">
-        <h4>Техническая документация</h4>
-        <ul>
-          <li>Полное техническое задание</li>
-          <li>Диаграммы UML и DFD</li>
-          <li>Руководство пользователя</li>
-          <li>Руководство администратора</li>
-        </ul>
-      </div>
-      
-      <div class="deliverable">
-        <h4>Исходный код</h4>
-        <ul>
-          <li>Frontend приложение</li>
-          <li>Backend API</li>
-          <li>Конфигурационные файлы</li>
-          <li>Скрипты развертывания</li>
-        </ul>
-      </div>
-      
-      <div class="deliverable">
-        <h4>Математические модели</h4>
-        <ul>
-          <li>Сети Петри для бизнес-процессов</li>
-          <li>Модели систем массового обслуживания</li>
-          <li>Модели системной динамики</li>
-          <li>AI-модели рекомендаций</li>
-        </ul>
-      </div>
-      
-      <div class="deliverable">
-        <h4>Отчеты</h4>
-        <ul>
-          <li>Отчет о тестировании</li>
-          <li>Экономическое обоснование</li>
-          <li>План развития проекта</li>
-          <li>Рекомендации по безопасности</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="acceptance-criteria">
-      <h3>Критерии приемки:</h3>
-      <ol>
-        <li>✅ Все функциональные требования реализованы</li>
-        <li>✅ Система проходит нагрузочное тестирование</li>
-        <li>✅ Ошибки безопасности не обнаружены</li>
-        <li>✅ Интерфейс соответствует дизайн-макетам</li>
-        <li>✅ Документация полная и понятная</li>
-        <li>✅ Система развернута и готова к использованию</li>
-      </ol>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-content">
-    <p>© 2025 Техническое задание «Компаньон» | Малюга Валерия Васильевна (1132236050, НФИбд-01-23)</p>
-    <p>Документ утвержден: 2025 год | Версия: 1.0</p>
-  </div>
-</footer>
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Техническое задание «Компаньон» | Малюга Валерия Васильевна (1132236050, НФИбд-01-23)</p>
+            <p>Документ утвержден: 2025 год | Версия: 1.0</p>
+        </div>
+    </footer>
 </body>
 </html>
