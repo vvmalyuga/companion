@@ -3,8 +3,8 @@ function login() {
   const pass = document.getElementById('password').value;
   if(user && pass){
     alert('Вход выполнен успешно!');
-    // Редирект на главную информационную страницу
-    window.location.href = "main.html";
+    // Редирект на страницу "О проекте" как главную
+    window.location.href = "about.html";
   } else {
     alert('Введите логин и пароль');
   }
