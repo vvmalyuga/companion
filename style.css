@@ -1,11 +1,29 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-header, footer { background: #4a90e2; color: white; text-align: center; padding: 15px; }
-nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
-h1, h2 { margin: 10px 0; }
-main { padding: 20px; }
-section { background: white; border-radius: 10px; margin-bottom: 20px; padding: 15px; }
-img { max-width: 100%; border-radius: 5px; margin: 10px 0; }
-.login-page { display: flex; justify-content: center; align-items: center; height: 100vh; }
-.login-box { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.2); text-align: center; }
-.login-box input { display: block; margin: 10px auto; padding: 10px; width: 80%; }
-.login-box button { padding: 10px 20px; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer; }
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f4f6f8;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.login {
+    text-align: center;
+    margin-top: 120px;
+}
+
+form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 220px;
+}
+
+button {
+    padding: 10px 25px;
+}
+
+hr {
+    margin: 40px 0;
+}
