@@ -1,654 +1,344 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Компаньон — UML Диаграммы</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компаньон — UML Диаграммы</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>UML Диаграммы — Компаньон</h1>
-  <nav>
-  <a href="about.html">Главная</a> |
-  <a href="tz.html">ТЗ</a> |
-  <a href="uml.html">UML</a> |
-  <a href="frames.html">Фрейм-модели</a> |
-  <a href="implementation.html">Реализация</a> |
-  <a href="payments.html">Платежи</a> |
-  <a href="index.html">Выйти</a>
-</nav>
-</header>
+    <header>
+        <div class="header-content">
+            <h1>UML Диаграммы</h1>
+            <nav>
+                <a href="about.html">Главная</a>
+                <a href="tz.html">ТЗ</a>
+                <a href="uml.html" class="active">UML</a>
+                <a href="frames.html">Фрейм-модели</a>
+                <a href="implementation.html">Реализация</a>
+                <a href="payments.html">Платежи</a>
+                <a href="index.html" class="logout">Выйти</a>
+            </nav>
+        </div>
+    </header>
 
-<main>
-  <section class="uml-intro">
-    <h2>UML моделирование системы «Компаньон»</h2>
-    <p>Unified Modeling Language (UML) — стандартизированный язык графического описания для объектного моделирования в области разработки программного обеспечения. Ниже представлены 9 ключевых диаграмм UML, описывающих различные аспекты системы.</p>
-    
-    <div class="uml-overview">
-      <h3>Типы UML диаграмм в проекте:</h3>
-      <ol>
-        <li><strong>Диаграмма прецедентов (Use Case)</strong> — взаимодействие пользователей с системой</li>
-        <li><strong>Диаграмма классов (Class Diagram)</strong> — структура данных системы</li>
-        <li><strong>Диаграмма последовательностей (Sequence Diagram)</strong> — временные взаимодействия</li>
-        <li><strong>Диаграмма объектов (Object Diagram)</strong> — экземпляры классов в runtime</li>
-        <li><strong>Диаграмма компонентов (Component Diagram)</strong> — физическая архитектура</li>
-        <li><strong>Диаграмма развертывания (Deployment Diagram)</strong> — распределение по серверам</li>
-        <li><strong>Диаграмма ролей/акторов (Roles/Actors)</strong> — роли пользователей</li>
-        <li><strong>Диаграмма очередей/взаимодействий (Queue/Interaction)</strong> — потоки сообщений</li>
-        <li><strong>Диаграмма системной динамики (System Dynamics)</strong> — изменение состояния во времени</li>
-      </ol>
-    </div>
-  </section>
+    <main>
+        <!-- Введение -->
+        <section class="intro-section">
+            <h2>UML моделирование системы «Компаньон»</h2>
+            <p>Unified Modeling Language (UML) — стандартизированный язык графического описания для объектного моделирования.</p>
+            
+            <div class="diagram-summary">
+                <div class="summary-card">
+                    <div class="summary-number">12</div>
+                    <div class="summary-title">Всего диаграмм</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number">9</div>
+                    <div class="summary-title">UML диаграмм</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-number">3</div>
+                    <div class="summary-title">Процессные диаграммы</div>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>1. Use Case Diagram (Диаграмма прецедентов)</h2>
-      <span class="diagram-type">Поведенческая диаграмма</span>
-    </div>
-    <img src="./diagrams/uml_usecase.png" alt="Use Case Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма показывает взаимодействие различных акторов (пользователей) с системой «Компаньон». Отображает основные сценарии использования системы.</p>
-      
-      <h3>Основные акторы:</h3>
-      <ul>
-        <li><strong>Заказчик:</strong> Регистрируется, ищет компаньона, бронирует встречи, оплачивает, оставляет отзывы</li>
-        <li><strong>Компаньон:</strong> Создает профиль, управляет расписанием, принимает заявки, получает оплату</li>
-        <li><strong>Администратор:</strong> Модерирует пользователей, управляет контентом, просматривает статистику</li>
-        <li><strong>Платежная система:</strong> Внешняя система обработки платежей</li>
-      </ul>
-      
-      <h3>Ключевые прецеденты:</h3>
-      <table class="use-cases-table">
-        <thead>
-          <tr>
-            <th>Прецедент</th>
-            <th>Актор</th>
-            <th>Описание</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>UC-01: Регистрация</td>
-            <td>Заказчик, Компаньон</td>
-            <td>Создание учетной записи с выбором роли</td>
-          </tr>
-          <tr>
-            <td>UC-02: Поиск компаньона</td>
-            <td>Заказчик</td>
-            <td>Поиск по фильтрам и категориям</td>
-          </tr>
-          <tr>
-            <td>UC-03: Бронирование встречи</td>
-            <td>Заказчик</td>
-            <td>Выбор даты, времени и оформление заявки</td>
-          </tr>
-          <tr>
-            <td>UC-04: Принятие заявки</td>
-            <td>Компаньон</td>
-            <td>Подтверждение или отклонение бронирования</td>
-          </tr>
-          <tr>
-            <td>UC-05: Оплата услуг</td>
-            <td>Заказчик</td>
-            <td>Оплата через интегрированную платежную систему</td>
-          </tr>
-          <tr>
-            <td>UC-06: Оставление отзыва</td>
-            <td>Заказчик</td>
-            <td>Написание отзыва и оценка после встречи</td>
-          </tr>
-          <tr>
-            <td>UC-07: Модерация контента</td>
-            <td>Администратор</td>
-            <td>Проверка и одобрение/отклонение контента</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+        <!-- Use Case Diagram -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>1. Use Case Diagram</h2>
+                <span class="diagram-type">Диаграмма прецедентов</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_usecase.png" alt="Use Case Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Описание:</h3>
+                    <p>Показывает взаимодействие акторов с системой и основные сценарии использования.</p>
+                    
+                    <h3>Основные акторы:</h3>
+                    <ul>
+                        <li><strong>Заказчик:</strong> Регистрация, поиск, бронирование, оплата</li>
+                        <li><strong>Компаньон:</strong> Создание профиля, управление расписанием, прием заявок</li>
+                        <li><strong>Администратор:</strong> Модерация, управление контентом, аналитика</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>2. Class Diagram (Диаграмма классов)</h2>
-      <span class="diagram-type">Структурная диаграмма</span>
-    </div>
-    <img src="./diagrams/uml_class.png" alt="Class Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма показывает статическую структуру системы: классы, их атрибуты, методы и взаимосвязи между ними.</p>
-      
-      <h3>Основные классы системы:</h3>
-      
-      <div class="class-list">
-        <div class="class-card">
-          <h4>Класс: User (Пользователь)</h4>
-          <p><strong>Атрибуты:</strong> id, email, password_hash, role, created_at</p>
-          <p><strong>Методы:</strong> register(), login(), updateProfile()</p>
-          <p><strong>Наследование:</strong> Родительский класс для Customer и Companion</p>
-        </div>
-        
-        <div class="class-card">
-          <h4>Класс: Customer (Заказчик)</h4>
-          <p><strong>Атрибуты:</strong> preferences, payment_methods, subscription_type</p>
-          <p><strong>Методы:</strong> searchCompanion(), bookMeeting(), leaveReview()</p>
-          <p><strong>Ассоциации:</strong> Имеет множество Booking</p>
-        </div>
-        
-        <div class="class-card">
-          <h4>Класс: Companion (Компаньон)</h4>
-          <p><strong>Атрибуты:</strong> bio, hourly_rate, categories, availability</p>
-          <p><strong>Методы:</strong> updateSchedule(), acceptBooking(), withdrawFunds()</p>
-          <p><strong>Ассоциации:</strong> Имеет множество Booking и Review</p>
-        </div>
-        
-        <div class="class-card">
-          <h4>Класс: Booking (Бронирование)</h4>
-          <p><strong>Атрибуты:</strong> id, date, time, duration, status, total_price</p>
-          <p><strong>Методы:</strong> confirm(), cancel(), reschedule()</p>
-          <p><strong>Ассоциации:</strong> Принадлежит Customer и Companion</p>
-        </div>
-        
-        <div class="class-card">
-          <h4>Класс: Review (Отзыв)</h4>
-          <p><strong>Атрибуты:</strong> id, rating, comment, date, is_verified</p>
-          <p><strong>Методы:</strong> publish(), edit(), report()</p>
-          <p><strong>Ассоциации:</strong> Принадлежит Customer, относится к Companion</p>
-        </div>
-        
-        <div class="class-card">
-          <h4>Класс: Payment (Платеж)</h4>
-          <p><strong>Атрибуты:</strong> id, amount, currency, status, transaction_id</p>
-          <p><strong>Методы:</strong> process(), refund(), getReceipt()</p>
-          <p><strong>Ассоциации:</strong> Связан с Booking один-к-одному</p>
-        </div>
-      </div>
-      
-      <h3>Типы отношений между классами:</h3>
-      <ul>
-        <li><strong>Наследование (Inheritance):</strong> Customer и Companion наследуют от User</li>
-        <li><strong>Ассоциация (Association):</strong> Customer имеет множество Booking</li>
-        <li><strong>Агрегация (Aggregation):</strong> System содержит множество Users</li>
-        <li><strong>Композиция (Composition):</strong> Booking состоит из Payment</li>
-        <li><strong>Зависимость (Dependency):</strong> Review зависит от Booking</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Class Diagram -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>2. Class Diagram</h2>
+                <span class="diagram-type">Диаграмма классов</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_class.png" alt="Class Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Основные классы:</h3>
+                    
+                    <div class="class-list">
+                        <div class="class-item">
+                            <h4>User (Пользователь)</h4>
+                            <p><strong>Атрибуты:</strong> id, email, password_hash, role</p>
+                            <p><strong>Методы:</strong> register(), login(), updateProfile()</p>
+                        </div>
+                        
+                        <div class="class-item">
+                            <h4>Customer (Заказчик)</h4>
+                            <p><strong>Наследует:</strong> User</p>
+                            <p><strong>Методы:</strong> searchCompanion(), bookMeeting()</p>
+                        </div>
+                        
+                        <div class="class-item">
+                            <h4>Companion (Компаньон)</h4>
+                            <p><strong>Наследует:</strong> User</p>
+                            <p><strong>Методы:</strong> updateSchedule(), acceptBooking()</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>3. Sequence Diagram (Диаграмма последовательностей)</h2>
-      <span class="diagram-type">Поведенческая диаграмма</span>
-    </div>
-    <img src="./diagrams/uml_sequence.png" alt="Sequence Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма показывает временную последовательность взаимодействия объектов в рамках конкретного сценария использования.</p>
-      
-      <h3>Сценарий: Бронирование встречи</h3>
-      <ol>
-        <li><strong>Customer (Заказчик):</strong> Выбирает компаньона и нажимает "Забронировать"</li>
-        <li><strong>Frontend:</strong> Отправляет запрос на бронирование в API</li>
-        <li><strong>BookingController:</strong> Проверяет доступность выбранного времени</li>
-        <li><strong>Database:</strong> Возвращает информацию о доступности</li>
-        <li><strong>BookingController:</strong> Создает предварительную запись о бронировании</li>
-        <li><strong>PaymentService:</strong> Инициирует процесс оплаты</li>
-        <li><strong>Payment Gateway:</strong> Обрабатывает платеж и возвращает результат</li>
-        <li><strong>NotificationService:</strong> Отправляет уведомление компаньону</li>
-        <li><strong>Companion (Компаньон):</strong> Получает уведомление о новой заявке</li>
-        <li><strong>Frontend:</strong> Отображает подтверждение бронирования заказчику</li>
-      </ol>
-      
-      <h3>Альтернативные потоки:</h3>
-      <ul>
-        <li><strong>Время недоступно:</strong> Система предлагает альтернативные слоты</li>
-        <li><strong>Оплата не прошла:</strong> Бронирование отменяется автоматически</li>
-        <li><strong>Компаньон отклоняет заявку:</strong> Средства возвращаются заказчику</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Sequence Diagram -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>3. Sequence Diagram</h2>
+                <span class="diagram-type">Диаграмма последовательностей</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_sequence.png" alt="Sequence Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Сценарий: Бронирование встречи</h3>
+                    <ol>
+                        <li>Заказчик выбирает компаньона</li>
+                        <li>Система проверяет доступность времени</li>
+                        <li>Создается предварительная запись</li>
+                        <li>Инициируется процесс оплаты</li>
+                        <li>Отправляется уведомление компаньону</li>
+                        <li>Отображается подтверждение заказчику</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>4. Object Diagram (Диаграмма объектов)</h2>
-      <span class="diagram-type">Структурная диаграмма</span>
-    </div>
-    <img src="./diagrams/uml_object.png" alt="Object Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма показывает конкретные экземпляры классов (объекты) и связи между ними в определенный момент времени.</p>
-      
-      <h3>Конкретные объекты в системе:</h3>
-      <div class="object-examples">
-        <div class="object-card">
-          <h4>Объект: customer1</h4>
-          <p><strong>Класс:</strong> Customer</p>
-          <p><strong>Атрибуты:</strong> id = "cust_001", name = "Анна Иванова", email = "anna@mail.com"</p>
-          <p><strong>Связи:</strong> Имеет booking1, booking2</p>
-        </div>
-        
-        <div class="object-card">
-          <h4>Объект: companion1</h4>
-          <p><strong>Класс:</strong> Companion</p>
-          <p><strong>Атрибуты:</strong> id = "comp_001", name = "Максим Петров", rate = 1500₽/час</p>
-          <p><strong>Связи:</strong> Принимает booking1, имеет review1</p>
-        </div>
-        
-        <div class="object-card">
-          <h4>Объект: booking1</h4>
-          <p><strong>Класс:</strong> Booking</p>
-          <p><strong>Атрибуты:</strong> id = "book_001", date = "2025-03-15", time = "18:00"</p>
-          <p><strong>Связи:</strong> Принадлежит customer1, назначен companion1</p>
-        </div>
-        
-        <div class="object-card">
-          <h4>Объект: review1</h4>
-          <p><strong>Класс:</strong> Review</p>
-          <p><strong>Атрибуты:</strong> id = "rev_001", rating = 5, comment = "Отличная компания!"</p>
-          <p><strong>Связи:</strong> Написан customer1, относится к companion1</p>
-        </div>
-      </div>
-      
-      <h3>Значение для тестирования:</h3>
-      <p>Диаграмма объектов помогает тестировщикам создавать конкретные тестовые сценарии, основанные на реальных данных и связях между объектами.</p>
-    </div>
-  </section>
+        <!-- Object Diagram -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>4. Object Diagram</h2>
+                <span class="diagram-type">Диаграмма объектов</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_object.png" alt="Object Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Конкретные объекты:</h3>
+                    
+                    <div class="object-examples">
+                        <div class="object-item">
+                            <h4>customer1</h4>
+                            <p><strong>Класс:</strong> Customer</p>
+                            <p><strong>Атрибуты:</strong> id="cust_001", name="Анна"</p>
+                        </div>
+                        
+                        <div class="object-item">
+                            <h4>companion1</h4>
+                            <p><strong>Класс:</strong> Companion</p>
+                            <p><strong>Атрибуты:</strong> id="comp_001", rate=1500₽/час</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>5. Component Diagram (Диаграмма компонентов)</h2>
-      <span class="diagram-type">Структурная диаграмма</span>
-    </div>
-    <img src="./diagrams/uml_component.png" alt="Component Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма показывает физические компоненты системы и зависимости между ними.</p>
-      
-      <h3>Основные компоненты системы:</h3>
-      <div class="component-list">
-        <div class="component">
-          <h4>Web Client</h4>
-          <p><strong>Тип:</strong> Веб-браузер</p>
-          <p><strong>Зависимости:</strong> Загружает ресурсы с Web Server</p>
-          <p><strong>Содержит:</strong> HTML, CSS, JavaScript файлы</p>
-        </div>
-        
-        <div class="component">
-          <h4>Web Server</h4>
-          <p><strong>Тип:</strong> Nginx / Apache</p>
-          <p><strong>Функции:</strong> Обслуживание статических файлов, балансировка нагрузки</p>
-          <p><strong>Порты:</strong> 80 (HTTP), 443 (HTTPS)</p>
-        </div>
-        
-        <div class="component">
-          <h4>Application Server</h4>
-          <p><strong>Тип:</strong> Node.js / Python</p>
-          <p><strong>Модули:</strong> User Management, Booking Engine, Payment Processor</p>
-          <p><strong>API:</strong> REST endpoints для клиентов</p>
-        </div>
-        
-        <div class="component">
-          <h4>Database Server</h4>
-          <p><strong>Тип:</strong> PostgreSQL, MongoDB</p>
-          <p><strong>Базы:</strong> users_db, bookings_db, payments_db</p>
-          <p><strong>Репликация:</strong> Master-Slave для отказоустойчивости</p>
-        </div>
-        
-        <div class="component">
-          <h4>External Services</h4>
-          <p><strong>Платежный шлюз:</strong> ЮKassa, Stripe</p>
-          <p><strong>СМС сервис:</strong> Twilio, SMS.ru</p>
-          <p><strong>Email сервис:</strong> SendGrid, Mailgun</p>
-          <p><strong>Облачное хранилище:</strong> AWS S3, Yandex Object Storage</p>
-        </div>
-      </div>
-      
-      <h3>Интерфейсы между компонентами:</h3>
-      <ul>
-        <li><strong>WebClient ↔ WebServer:</strong> HTTP/HTTPS протокол</li>
-        <li><strong>WebServer ↔ AppServer:</strong> Reverse proxy (порт 3000)</li>
-        <li><strong>AppServer ↔ Database:</strong> TCP соединение, SQL/NoSQL запросы</li>
-        <li><strong>AppServer ↔ ExternalServices:</strong> REST API, Webhooks</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Component Diagram -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>5. Component Diagram</h2>
+                <span class="diagram-type">Диаграмма компонентов</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_component.png" alt="Component Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Основные компоненты:</h3>
+                    
+                    <div class="components">
+                        <div class="component">
+                            <h4>Web Client</h4>
+                            <p>Веб-браузер пользователя</p>
+                        </div>
+                        
+                        <div class="component">
+                            <h4>Application Server</h4>
+                            <p>Node.js с бизнес-логикой</p>
+                        </div>
+                        
+                        <div class="component">
+                            <h4>Database Server</h4>
+                            <p>PostgreSQL, MongoDB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>6. Deployment Diagram (Диаграмма развертывания)</h2>
-      <span class="diagram-type">Структурная диаграмма</span>
-    </div>
-    <img src="./diagrams/uml_deployment.png" alt="Deployment Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма показывает физическое размещение компонентов системы на аппаратных узлах.</p>
-      
-      <h3>Аппаратная архитектура:</h3>
-      <div class="deployment-nodes">
-        <div class="node">
-          <h4>Узел: Load Balancer</h4>
-          <p><strong>Спецификации:</strong> 2 CPU, 4 GB RAM</p>
-          <p><strong>Компоненты:</strong> HAProxy, Nginx</p>
-          <p><strong>Назначение:</strong> Распределение трафика между серверами</p>
-        </div>
-        
-        <div class="node">
-          <h4>Узел: Web Servers (x2)</h4>
-          <p><strong>Спецификации:</strong> 4 CPU, 8 GB RAM каждый</p>
-          <p><strong>Компоненты:</strong> Nginx, статические файлы</p>
-          <p><strong>Назначение:</strong> Обслуживание веб-контента</p>
-        </div>
-        
-        <div class="node">
-          <h4>Узел: App Servers (x3)</h4>
-          <p><strong>Спецификации:</strong> 8 CPU, 16 GB RAM каждый</p>
-          <p><strong>Компоненты:</strong> Node.js, бизнес-логика</p>
-          <p><strong>Назначение:</strong> Обработка запросов, выполнение операций</p>
-        </div>
-        
-        <div class="node">
-          <h4>Узел: Database Cluster</h4>
-          <p><strong>Спецификации:</strong> 16 CPU, 64 GB RAM</p>
-          <p><strong>Компоненты:</strong> PostgreSQL (master), MongoDB (sharded)</p>
-          <p><strong>Назначение:</strong> Хранение и обработка данных</p>
-        </div>
-        
-        <div class="node">
-          <h4>Узел: Cache Server</h4>
-          <p><strong>Спецификации:</strong> 4 CPU, 8 GB RAM</p>
-          <p><strong>Компоненты:</strong> Redis, Memcached</p>
-          <p><strong>Назначение:</strong> Кэширование часто запрашиваемых данных</p>
-        </div>
-        
-        <div class="node">
-          <h4>Узел: File Storage</h4>
-          <p><strong>Спецификации:</strong> Облачное решение</p>
-          <p><strong>Компоненты:</strong> AWS S3 совместимое хранилище</p>
-          <p><strong>Назначение:</strong> Хранение фотографий и файлов пользователей</p>
-        </div>
-      </div>
-      
-      <h3>Сетевые соединения:</h3>
-      <ul>
-        <li><strong>Публичная сеть:</strong> Load Balancer ↔ Интернет (80/443 порты)</li>
-        <li><strong>Приватная сеть:</strong> Все серверы в одном VLAN</li>
-        <li><strong>База данных:</strong> Репликация между узлами по защищенному каналу</li>
-        <li><strong>Резервное копирование:</strong> Ежедневные backup в удаленное хранилище</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Deployment Diagram -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>6. Deployment Diagram</h2>
+                <span class="diagram-type">Диаграмма развертывания</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_deployment.png" alt="Deployment Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Аппаратная архитектура:</h3>
+                    
+                    <div class="deployment-nodes">
+                        <div class="node">
+                            <h4>Load Balancer</h4>
+                            <p>Распределение трафика</p>
+                        </div>
+                        
+                        <div class="node">
+                            <h4>Web Servers (x2)</h4>
+                            <p>Обслуживание веб-контента</p>
+                        </div>
+                        
+                        <div class="node">
+                            <h4>App Servers (x3)</h4>
+                            <p>Обработка запросов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>7. Roles / Actors Diagram (Диаграмма ролей/акторов)</h2>
-      <span class="diagram-type">Поведенческая диаграмма</span>
-    </div>
-    <img src="./diagrams/uml_roles.png" alt="Roles Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма детально описывает роли пользователей в системе, их права, обязанности и взаимодействие.</p>
-      
-      <h3>Иерархия ролей и прав доступа:</h3>
-      <table class="roles-table">
-        <thead>
-          <tr>
-            <th>Роль</th>
-            <th>Права доступа</th>
-            <th>Ограничения</th>
-            <th>Типичные действия</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Гость (неавторизованный)</strong></td>
-            <td>Просмотр главной страницы, чтение информации о сервисе</td>
-            <td>Нет доступа к поиску, бронированию, профилям</td>
-            <td>Регистрация, просмотр отзывов</td>
-          </tr>
-          <tr>
-            <td><strong>Заказчик (обычный)</strong></td>
-            <td>Поиск компаньонов, просмотр профилей, бронирование, оплата</td>
-            <td>Не может создавать анкету компаньона</td>
-            <td>Бронирование встреч, написание отзывов</td>
-          </tr>
-          <tr>
-            <td><strong>Заказчик (премиум)</strong></td>
-            <td>Все права обычного заказчика + приоритет в поиске, расширенные фильтры</td>
-            <td>Дополнительная оплата подписки</td>
-            <td>Расширенный поиск, приоритетные уведомления</td>
-          </tr>
-          <tr>
-            <td><strong>Компаньон (базовый)</strong></td>
-            <td>Создание анкеты, управление расписанием, прием заявок</td>
-            <td>Ограниченное количество фото в профиле</td>
-            <td>Обновление профиля, подтверждение бронирований</td>
-          </tr>
-          <tr>
-            <td><strong>Компаньон (верифицированный)</strong></td>
-            <td>Все права базового + отметка "Проверено", повышенный рейтинг</td>
-            <td>Требуется прохождение верификации</td>
-            <td>Верификация личности, повышение доверия</td>
-          </tr>
-          <tr>
-            <td><strong>Компаньон (премиум)</strong></td>
-            <td>Все права верифицированного + выделение в поиске, аналитика</td>
-            <td>Ежемесячная плата за премиум-статус</td>
-            <td>Продвижение профиля, доступ к статистике</td>
-          </tr>
-          <tr>
-            <td><strong>Модератор</strong></td>
-            <td>Проверка профилей, модерация отзывов, блокировка пользователей</td>
-            <td>Не может изменять системные настройки</td>
-            <td>Проверка контента, ответы на жалобы</td>
-          </tr>
-          <tr>
-            <td><strong>Администратор</strong></td>
-            <td>Полный доступ ко всем функциям, управление системой</td>
-            <td>Ответственность за безопасность системы</td>
-            <td>Настройка системы, управление пользователями</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <h3>Переходы между ролями:</h3>
-      <ul>
-        <li><strong>Гость → Заказчик/Компаньон:</strong> После регистрации и подтверждения email</li>
-        <li><strong>Заказчик обычный → премиум:</strong> После оплаты подписки</li>
-        <li><strong>Компаньон базовый → верифицированный:</strong> После успешной верификации личности</li>
-        <li><strong>Компаньон верифицированный → премиум:</strong> После оплаты премиум-статуса</li>
-        <li><strong>Пользователь → Модератор:</strong> По назначению администратором</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Roles Diagram -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>7. Roles / Actors Diagram</h2>
+                <span class="diagram-type">Диаграмма ролей</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_roles.png" alt="Roles Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Иерархия ролей:</h3>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Роль</th>
+                                <th>Права</th>
+                                <th>Ограничения</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Заказчик</td>
+                                <td>Поиск, бронирование, отзывы</td>
+                                <td>Не может создавать анкету компаньона</td>
+                            </tr>
+                            <tr>
+                                <td>Компаньон</td>
+                                <td>Анкета, расписание, заявки</td>
+                                <td>Требуется верификация</td>
+                            </tr>
+                            <tr>
+                                <td>Администратор</td>
+                                <td>Полный доступ</td>
+                                <td>Ответственность за безопасность</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>8. Queue / Interaction Diagram (Диаграмма очередей/взаимодействий)</h2>
-      <span class="diagram-type">Поведенческая диаграмма</span>
-    </div>
-    <img src="./diagrams/uml_queue.png" alt="Queue Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма показывает потоки сообщений и взаимодействий между компонентами системы, включая очереди и асинхронную обработку.</p>
-      
-      <h3>Очереди сообщений в системе:</h3>
-      <div class="queue-list">
-        <div class="queue">
-          <h4>Очередь: Booking Requests</h4>
-          <p><strong>Назначение:</strong> Обработка запросов на бронирование</p>
-          <p><strong>Производитель:</strong> Frontend при отправке формы бронирования</p>
-          <p><strong>Потребитель:</strong> Booking Service</p>
-          <p><strong>Максимальный размер:</strong> 10 000 сообщений</p>
-        </div>
-        
-        <div class="queue">
-          <h4>Очередь: Email Notifications</h4>
-          <p><strong>Назначение:</strong> Отправка email уведомлений</p>
-          <p><strong>Производитель:</strong> Notification Service при событиях</p>
-          <p><strong>Потребитель:</strong> Email Service</p>
-          <p><strong>Задержка:</strong> До 5 минут для неважных уведомлений</p>
-        </div>
-        
-        <div class="queue">
-          <h4>Очередь: Payment Processing</h4>
-          <p><strong>Назначение:</strong> Обработка платежных транзакций</p>
-          <p><strong>Производитель:</strong> Payment Service при создании платежа</p>
-          <p><strong>Потребитель:</strong> Payment Gateway Integration</p>
-          <p><strong>Гарантия доставки:</strong> At-least-once delivery</p>
-        </div>
-        
-        <div class="queue">
-          <h4>Очередь: Review Moderation</h4>
-          <p><strong>Назначение:</strong> Модерация отзывов пользователей</p>
-          <p><strong>Производитель:</strong> Review Service при публикации отзыва</p>
-          <p><strong>Потребитель:</strong> Moderation Service</p>
-          <p><strong>Время обработки:</strong> До 24 часов</p>
-        </div>
-      </div>
-      
-      <h3>Паттерны взаимодействия:</h3>
-      <ul>
-        <li><strong>Request-Reply:</strong> Синхронные запросы к API (например, проверка доступности)</li>
-        <li><strong>Publish-Subscribe:</strong> Уведомления о событиях (например, новая заявка)</li>
-        <li><strong>Message Queue:</strong> Асинхронная обработка длительных операций</li>
-        <li><strong>Event Sourcing:</strong> Сохранение всех изменений состояния для аудита</li>
-      </ul>
-      
-      <h3>Технологии реализации:</h3>
-      <ul>
-        <li><strong>Message Broker:</strong> RabbitMQ или Apache Kafka</li>
-        <li><strong>Протоколы:</strong> AMQP для очередей, WebSocket для реального времени</li>
-        <li><strong>Сервисы:</strong> Микросервисная архитектура с четкими границами</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Queue Diagram -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>8. Queue / Interaction Diagram</h2>
+                <span class="diagram-type">Диаграмма очередей</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_queue.png" alt="Queue Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Очереди системы:</h3>
+                    
+                    <div class="queues">
+                        <div class="queue">
+                            <h4>Booking Requests</h4>
+                            <p>Обработка запросов на бронирование</p>
+                        </div>
+                        
+                        <div class="queue">
+                            <h4>Email Notifications</h4>
+                            <p>Отправка email уведомлений</p>
+                        </div>
+                        
+                        <div class="queue">
+                            <h4>Payment Processing</h4>
+                            <p>Обработка платежных транзакций</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="diagram-section">
-    <div class="diagram-header">
-      <h2>9. System Dynamics Diagram (Диаграмма системной динамики)</h2>
-      <span class="diagram-type">Диаграмма моделирования</span>
-    </div>
-    <img src="./diagrams/uml_systemdynamics.png" alt="System Dynamics Diagram">
-    <div class="diagram-description">
-      <h3>Описание:</h3>
-      <p>Диаграмма показывает динамику изменения состояния системы во времени, причинно-следственные связи и обратные связи.</p>
-      
-      <h3>Ключевые переменные системы:</h3>
-      <div class="system-variables">
-        <div class="variable">
-          <h4>R(t) — Зарегистрированные пользователи</h4>
-          <p><strong>Уравнение:</strong> dR/dt = α + δ * Z(t)</p>
-          <p><strong>Где:</strong> α = органический рост (100 чел/мес), δ = реферальный коэффициент (0.05)</p>
-        </div>
-        
-        <div class="variable">
-          <h4>A(t) — Активные пользователи</h4>
-          <p><strong>Уравнение:</strong> dA/dt = β * R(t) + ρ * A(t) - γ * A(t)</p>
-          <p><strong>Где:</strong> β = активация (0.3), ρ = удержание (0.2), γ = отток (0.1)</p>
-        </div>
-        
-        <div class="variable">
-          <h4>M(t) — Назначенные встречи</h4>
-          <p><strong>Уравнение:</strong> dM/dt = ε * A(t) - η * M(t)</p>
-          <p><strong>Где:</strong> ε = конверсия в бронирования (0.4), η = завершение встреч (0.9)</p>
-        </div>
-        
-        <div class="variable">
-          <h4>Z(t) — Завершенные встречи</h4>
-          <p><strong>Уравнение:</strong> dZ/dt = η * M(t)</p>
-          <p><strong>Назначение:</strong> Показатель успешных взаимодействий</p>
-        </div>
-      </div>
-      
-      <h3>Обратные связи в системе:</h3>
-      <ul>
-        <li><strong>Положительная обратная связь:</strong> Успешные встречи (Z) приводят к новым регистрациям (R) через рекомендации</li>
-        <li><strong>Отрицательная обратная связь:</strong> Перегрузка системы приводит к снижению активности пользователей</li>
-        <li><strong>Балансирующая петля:</strong> Система рейтингов регулирует качество компаньонов</li>
-        <li><strong>Усиливающая петля:</strong> Сетевой эффект — больше пользователей привлекает еще больше пользователей</li>
-      </ul>
-      
-      <h3>Прогноз развития системы:</h3>
-      <table class="forecast-table">
-        <thead>
-          <tr>
-            <th>Период</th>
-            <th>Пользователи</th>
-            <th>Встречи/мес</th>
-            <th>Выручка, ₽/мес</th>
-            <th>Примечания</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Месяц 1 (запуск)</td>
-            <td>500</td>
-            <td>100</td>
-            <td>120 000</td>
-            <td>Начальная аудитория, тестирование</td>
-          </tr>
-          <tr>
-            <td>Месяц 6</td>
-            <td>5 000</td>
-            <td>1 500</td>
-            <td>1 800 000</td>
-            <td>Стабильный рост, сетевой эффект</td>
-          </tr>
-          <tr>
-            <td>Месяц 12</td>
-            <td>15 000</td>
-            <td>5 000</td>
-            <td>6 000 000</td>
-            <td>Лидер рынка, расширение в регионы</td>
-          </tr>
-          <tr>
-            <td>Месяц 24</td>
-            <td>50 000</td>
-            <td>20 000</td>
-            <td>24 000 000</td>
-            <td>Международная экспансия, новые услуги</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+        <!-- System Dynamics -->
+        <section class="diagram-section">
+            <div class="diagram-header">
+                <h2>9. System Dynamics Diagram</h2>
+                <span class="diagram-type">Системная динамика</span>
+            </div>
+            
+            <div class="diagram-content">
+                <img src="./diagrams/uml_systemdynamics.png" alt="System Dynamics Diagram">
+                
+                <div class="diagram-description">
+                    <h3>Переменные системы:</h3>
+                    
+                    <div class="variables">
+                        <div class="variable">
+                            <h4>R(t) — Зарегистрированные пользователи</h4>
+                            <p>dR/dt = α + δ * Z(t)</p>
+                        </div>
+                        
+                        <div class="variable">
+                            <h4>A(t) — Активные пользователи</h4>
+                            <p>dA/dt = β * R(t) + ρ * A(t)</p>
+                        </div>
+                        
+                        <div class="variable">
+                            <h4>M(t) — Назначенные встречи</h4>
+                            <p>dM/dt = ε * A(t)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <section class="summary-section">
-    <h2>Заключение по UML моделированию</h2>
-    <p>Представленные 9 диаграмм UML полностью описывают систему «Компаньон» с различных точек зрения:</p>
-    
-    <div class="uml-benefits">
-      <div class="benefit">
-        <h3>Для разработчиков</h3>
-        <p>Четкое понимание архитектуры, классов, взаимодействий и потоков данных</p>
-      </div>
-      
-      <div class="benefit">
-        <h3>Для тестировщиков</h3>
-        <p>Возможность создать полное покрытие тестами на основе use case и sequence диаграмм</p>
-      </div>
-      
-      <div class="benefit">
-        <h3>Для заказчиков</h3>
-        <p>Наглядное представление функционала системы и процессов</p>
-      </div>
-      
-      <div class="benefit">
-        <h3>Для бизнес-аналитиков</h3>
-        <p>Понимание бизнес-процессов, ролей и динамики развития системы</p>
-      </div>
-    </div>
-    
-    <p><strong>Все диаграммы взаимосвязаны и образуют целостную модель системы</strong>, которая служит основой для успешной разработки, тестирования и внедрения веб-сервиса «Компаньон».</p>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-content">
-    <p>© 2025 UML моделирование системы «Компаньон» | Малюга Валерия Васильевна (1132236050, НФИбд-01-23)</p>
-    <p>Все диаграммы созданы в соответствии со стандартом UML 2.5</p>
-  </div>
-</footer>
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 UML моделирование «Компаньон» | Малюга Валерия Васильевна (1132236050, НФИбд-01-23)</p>
+            <p>Все диаграммы созданы в соответствии со стандартом UML 2.5</p>
+        </div>
+    </footer>
 </body>
 </html>
