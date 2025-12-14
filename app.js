@@ -3,7 +3,7 @@ function login() {
   const pass = document.getElementById('password').value;
   if(user && pass){
     alert('Вход выполнен успешно!');
-    window.location.href = "about.html";
+    // Здесь можно сделать редирект на главную или личный кабинет
   } else {
     alert('Введите логин и пароль');
   }
