@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Компаньон — Вход</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Компаньон — Вход</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="login-page">
-    <div class="login-box">
-      <h1>Компаньон</h1>
-      <p>Найди компанию для прогулок и общения</p>
-      <input type="text" placeholder="Логин" id="username">
-      <input type="password" placeholder="Пароль" id="password">
-      <button onclick="login()">Войти</button>
-    </div>
-  </div>
+<body class="login">
 
-  <script src="app.js"></script>
+<h1>Система «Компаньон»</h1>
+
+<form action="main.html">
+    <input type="text" placeholder="Логин" required>
+    <input type="password" placeholder="Пароль" required>
+    <button type="submit">Войти</button>
+</form>
+
+<p class="note">
+    * Демонстрационный вход (без реальной авторизации)
+</p>
+
 </body>
 </html>
