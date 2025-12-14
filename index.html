@@ -3,35 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Компаньон</title>
+  <title>Компаньон — Вход</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Компаньон — Найди компанию для прогулки и общения</h1>
-  </header>
-
-  <main>
-    <section id="catalog">
-      <h2>Каталог компаньонов</h2>
-      <div class="companion-card">
-        <h3>Иван Иванов</h3>
-        <p>Интересы: прогулки, музеи</p>
-        <p>Рейтинг: 4.8</p>
-        <button>Забронировать</button>
-      </div>
-      <div class="companion-card">
-        <h3>Мария Петрова</h3>
-        <p>Интересы: спорт, йога</p>
-        <p>Рейтинг: 4.9</p>
-        <button>Забронировать</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Компаньон</p>
-  </footer>
+  <div class="login-page">
+    <div class="login-box">
+      <h1>Компаньон</h1>
+      <p>Найди компанию для прогулок и общения</p>
+      <input type="text" placeholder="Логин" id="username">
+      <input type="password" placeholder="Пароль" id="password">
+      <button onclick="login()">Войти</button>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
