@@ -3,19 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Компаньон — Вход</title>
+<title>Компаньон — Главная</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="login-page">
-  <div class="login-box">
-    <h1>Компаньон</h1>
-    <p>Платформа для поиска компаньонов</p>
-    <input type="text" placeholder="Логин" id="username">
-    <input type="password" placeholder="Пароль" id="password">
-    <button onclick="login()">Войти</button>
+<header>
+  <h1>Компаньон</h1>
+  <nav>
+    <a href="index.html">Главная</a> |
+    <a href="about.html">О проекте</a> |
+    <a href="tz.html">ТЗ</a> |
+    <a href="uml.html">UML</a> |
+    <a href="frames.html">Фрейм-модели</a>
+  </nav>
+</header>
+<main>
+  <div class="intro">
+    <h2>Добро пожаловать на платформу Компаньон</h2>
+    <p>Найдите компанию для прогулок, мероприятий и общения.</p>
+    <p><a href="about.html">Узнать больше о проекте</a></p>
   </div>
-</div>
+  <div class="categories">
+    <h2>Категории</h2>
+    <button>Прогулки</button>
+    <button>Мероприятия</button>
+    <button>Спорт</button>
+    <button>Хобби</button>
+  </div>
+
+  <div class="login-page">
+    <div class="login-box">
+      <h2>Вход</h2>
+      <input type="text" placeholder="Логин" id="username">
+      <input type="password" placeholder="Пароль" id="password">
+      <button onclick="login()">Войти</button>
+    </div>
+  </div>
+</main>
+<footer>© 2025 Компаньон</footer>
 <script src="app.js"></script>
 </body>
 </html>
