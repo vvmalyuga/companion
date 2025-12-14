@@ -3,8 +3,16 @@ function login() {
   const pass = document.getElementById('password').value;
   if(user && pass){
     alert('Вход выполнен успешно!');
-    // Здесь можно сделать редирект на главную или личный кабинет
+    // Редирект на главную информационную страницу
+    window.location.href = "main.html";
   } else {
     alert('Введите логин и пароль');
   }
 }
+
+// Демо-доступ при нажатии Enter
+document.addEventListener('keypress', function(e) {
+  if(e.key === 'Enter') {
+    login();
+  }
+});
