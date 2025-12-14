@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Компаньон — Вход</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компаньон — Вход</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="login-page">
-  <div class="login-box">
-    <h1>Компаньон</h1>
-    <p>Платформа для поиска компаньонов</p>
-    <input type="text" placeholder="Логин" id="username">
-    <input type="password" placeholder="Пароль" id="password">
-    <button onclick="login()">Войти</button>
-    <p class="demo-info">Для демо-входа используйте любые данные</p>
-  </div>
-</div>
-<script src="app.js"></script>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Компаньон</h1>
+                <p>Платформа для поиска компании</p>
+            </div>
+            
+            <div class="login-form">
+                <input type="text" placeholder="Логин" id="username">
+                <input type="password" placeholder="Пароль" id="password">
+                <button onclick="login()">Войти</button>
+            </div>
+            
+            <div class="login-info">
+                <p>Для демо-входа используйте любые данные</p>
+                <p>Нажмите Enter для быстрого входа</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
 </body>
 </html>
