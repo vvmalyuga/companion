@@ -1,125 +1,105 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Проект «Компаньон»</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Компаньон — Главная</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+  <h1>Веб-сервис «Компаньон»</h1>
+  <nav>
+    <a href="main.html">Главная</a> |
+    <a href="about.html">О проекте</a> |
+    <a href="tz.html">ТЗ</a> |
+    <a href="uml.html">UML</a> |
+    <a href="frames.html">Фрейм-модели</a> |
+    <a href="implementation.html">Реализация</a> |
+    <a href="payments.html">Платежи</a> |
+    <a href="index.html">Выйти</a>
+  </nav>
+</header>
 
-<h1>Проект «Компаньон»</h1>
+<main>
+  <section class="welcome-section">
+    <h2>Добро пожаловать в систему «Компаньон»</h2>
+    <p>Этот веб-сервис предназначен для поиска компании для прогулок, общения и совместных мероприятий.</p>
+    
+    <div class="quick-stats">
+      <h3>Статистика проекта</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>Диаграммы</h4>
+          <p class="stat-number">12</p>
+          <p>UML, DFD, IDEF0</p>
+        </div>
+        <div class="stat-card">
+          <h4>Модели</h4>
+          <p class="stat-number">5</p>
+          <p>Математические модели</p>
+        </div>
+        <div class="stat-card">
+          <h4>Сроки</h4>
+          <p class="stat-number">4 мес</p>
+          <p>Реализация проекта</p>
+        </div>
+        <div class="stat-card">
+          <h4>Аудитория</h4>
+          <p class="stat-number">3 категории</p>
+          <p>Целевые пользователи</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<hr>
+  <section>
+    <h2>Быстрый доступ к разделам</h2>
+    <div class="quick-links">
+      <a href="tz.html" class="quick-link">
+        <h3>Техническое задание</h3>
+        <p>Полное ТЗ с требованиями и спецификациями</p>
+      </a>
+      <a href="uml.html" class="quick-link">
+        <h3>UML Диаграммы</h3>
+        <p>9 типов диаграмм проектирования</p>
+      </a>
+      <a href="implementation.html" class="quick-link">
+        <h3>Реализация</h3>
+        <p>Технологии, код, математические модели</p>
+      </a>
+      <a href="frames.html" class="quick-link">
+        <h3>Фрейм-модели</h3>
+        <p>Структурное проектирование системы</p>
+      </a>
+    </div>
+  </section>
 
-<h2>Цель проекта</h2>
-<p>
-Создание информационной системы для поиска, бронирования
-и взаимодействия с компаньонами с обеспечением безопасности
-и защиты данных пользователей.
-</p>
+  <section>
+    <h2>Ключевые особенности проекта</h2>
+    <ul>
+      <li><strong>Два типа пользователей:</strong> Заказчик и Компаньон</li>
+      <li><strong>Система рейтингов и отзывов:</strong> Для повышения доверия</li>
+      <li><strong>Модуль бронирования:</strong> Онлайн-оформление встреч</li>
+      <li><strong>Платежная система:</strong> Безопасные транзакции</li>
+      <li><strong>AI-рекомендации:</strong> Умный подбор по интересам</li>
+    </ul>
+  </section>
 
-<h2>Задачи</h2>
-<ul>
-    <li>Регистрация и аутентификация</li>
-    <li>Поиск и фильтрация компаньонов</li>
-    <li>Бронирование услуг</li>
-    <li>Чат и уведомления</li>
-    <li>Отзывы и рейтинги</li>
-</ul>
+  <section>
+    <h2>Графики и визуализации</h2>
+    <div class="charts">
+      <img src="./diagrams/statistics.jpg" alt="Статистика проекта" style="width: 100%; max-width: 800px;">
+      <p class="chart-caption">Динамика роста пользователей и встреч (прогноз на 12 месяцев)</p>
+    </div>
+  </section>
+</main>
 
-<h2>Целевая аудитория</h2>
-<ul>
-    <li>Заказчики</li>
-    <li>Компаньоны</li>
-    <li>Администраторы</li>
-</ul>
-
-<hr>
-
-<h2>Техническое задание</h2>
-
-<h3>Безопасность</h3>
-<ul>
-    <li>Аутентификация и авторизация</li>
-    <li>Хеширование паролей</li>
-    <li>Разграничение прав доступа</li>
-    <li>Защита персональных данных</li>
-</ul>
-
-<h3>Функциональность (IDEF0)</h3>
-<p>
-Регистрация, поиск, бронирование, оплата, отзывы, администрирование
-</p>
-
-<hr>
-
-<h2>Диаграммы</h2>
-
-<ul>
-    <li>IDEF0 — функциональная модель</li>
-    <li>DFD Level 0</li>
-    <li>DFD Level 1</li>
-    <li>UML Use Case</li>
-    <li>UML Class</li>
-    <li>UML Sequence</li>
-    <li>Component Diagram</li>
-    <li>Deployment Diagram</li>
-    <li>Object Diagram</li>
-    <li>Queue Diagram</li>
-    <li>System Dynamics</li>
-    <li>Petri Net</li>
-</ul>
-
-<p>
-Ссылки на диаграммы (JPEG / TXT) размещены в репозитории GitHub.
-</p>
-
-<hr>
-
-<h2>Жизненный цикл системы</h2>
-
-<ol>
-    <li>Планирование</li>
-    <li>Проектирование (диаграммы)</li>
-    <li>Реализация</li>
-    <li>Тестирование</li>
-    <li>Эксплуатация</li>
-</ol>
-
-<hr>
-
-<h2>Реализация</h2>
-<p>
-Проектирование выполнено с использованием UML, DFD, IDEF0.
-Код реализован на Python.
-Математические модели применяются для обработки данных.
-</p>
-
-<hr>
-
-<h2>Тестирование</h2>
-<ul>
-    <li>Модульное</li>
-    <li>Функциональное</li>
-    <li>Интеграционное</li>
-    <li>Тестирование безопасности</li>
-</ul>
-
-<hr>
-
-<h2>Фрейм-модели</h2>
-
-<ul>
-    <li><b>ФК функция:</b> бронирование услуги</li>
-    <li><b>ФК внешняя сущность:</b> заказчик</li>
-    <li><b>ФК хранилище данных:</b> база бронирований</li>
-    <li><b>ФК поток данных:</b> платёжная информация</li>
-    <li><b>ФК роль:</b> компаньон</li>
-    <li><b>ФК прецедент:</b> оформление брони</li>
-    <li><b>ФК класс:</b> Booking</li>
-    <li><b>ФК объект:</b> Бронь №101</li>
-    <li><b>Отношения между классами:</b> ассоциация</li>
-</ul>
-
+<footer>
+  <div class="footer-content">
+    <p>© 2025 Компаньон | Малюга Валерия Васильевна (1132236050, НФИбд-01-23)</p>
+    <p>Учебный проект по разработке веб-сервиса</p>
+  </div>
+</footer>
 </body>
 </html>
