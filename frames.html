@@ -8,39 +8,466 @@
 </head>
 <body>
 <header>
-  <h1>Фрейм-модели — Компаньон</h1>
+  <h1>Фрейм-модели системы «Компаньон»</h1>
   <nav>
-    <a href="index.html">Главная</a> |
+    <a href="main.html">Главная</a> |
     <a href="about.html">О проекте</a> |
     <a href="tz.html">ТЗ</a> |
-    <a href="uml.html">UML</a>
+    <a href="uml.html">UML</a> |
+    <a href="frames.html">Фрейм-модели</a> |
+    <a href="implementation.html">Реализация</a> |
+    <a href="payments.html">Платежи</a> |
+    <a href="index.html">Выйти</a>
   </nav>
 </header>
+
 <main>
-  <section>
-    <h2>Структура фрейм-моделей</h2>
-    <ul>
-      <li>ФК — функция по предметной области</li>
-      <li>ФК — внешняя сущность</li>
-      <li>ФК — хранилище данных</li>
-      <li>ФК — поток данных</li>
-      <li>ФК — роль</li>
-      <li>ФК — прецедент</li>
-      <li>ФК — класс</li>
-      <li>ФК — объект</li>
-      <li>Отношения между классами</li>
-    </ul>
+  <section class="frames-intro">
+    <h2>Фреймовое моделирование системы</h2>
+    <p>Фрейм-модели (frame models) — это метод структурного представления знаний о предметной области, где информация организуется в виде фреймов (кадров). Каждый фрейм описывает определенный концепт системы через слоты (атрибуты) и их значения.</p>
+    
+    <div class="frames-overview">
+      <h3>Преимущества фреймового подхода:</h3>
+      <ul>
+        <li><strong>Структурированность:</strong> Четкая организация знаний</li>
+        <li><strong>Иерархичность:</strong> Возможность наследования свойств</li>
+        <li><strong>Модульность:</strong> Независимое описание компонентов</li>
+        <li><strong>Гибкость:</strong> Легкость расширения и модификации</li>
+        <li><strong>Наглядность:</strong> Визуальное представление структуры</li>
+      </ul>
+    </div>
   </section>
+
   <section>
-    <h2>Примеры фрейм-моделей</h2>
-    <img src="diagrams/frame_content.png" alt="Frame Content">
-    <img src="diagrams/frame_role.png" alt="Frame Role">
-    <img src="diagrams/frame_class.png" alt="Frame Class">
-    <img src="diagrams/frame_object.png" alt="Frame Object">
-    <img src="diagrams/frame_dataflow.png" alt="Frame Data Flow">
-    <img src="diagrams/frame_usecase.png" alt="Frame Use Case">
+    <h2>Структура фрейм-моделей системы «Компаньон»</h2>
+    
+    <div class="frame-types">
+      <div class="frame-type-card">
+        <h3>ФК — функция по предметной области</h3>
+        <p>Описание бизнес-функций системы</p>
+        <ul>
+          <li>Поиск компаньонов</li>
+          <li>Бронирование встреч</li>
+          <li>Обработка платежей</li>
+          <li>Управление профилями</li>
+        </ul>
+      </div>
+      
+      <div class="frame-type-card">
+        <h3>ФК — внешняя сущность</h3>
+        <p>Объекты вне системы, взаимодействующие с ней</p>
+        <ul>
+          <li>Пользователь (человек)</li>
+          <li>Платежная система</li>
+          <li>СМС-сервис</li>
+          <li>Email-провайдер</li>
+        </ul>
+      </div>
+      
+      <div class="frame-type-card">
+        <h3>ФК — хранилище данных</h3>
+        <p>Места хранения информации в системе</p>
+        <ul>
+          <li>База пользователей</li>
+          <li>Таблица заказов</li>
+          <li>Архив отзывов</li>
+          <li>Кэш сессий</li>
+        </ul>
+      </div>
+      
+      <div class="frame-type-card">
+        <h3>ФК — поток данных</h3>
+        <p>Передача информации между компонентами</p>
+        <ul>
+          <li>Запрос на поиск</li>
+          <li>Ответ с результатами</li>
+          <li>Платежная транзакция</li>
+          <li>Уведомление пользователю</li>
+        </ul>
+      </div>
+      
+      <div class="frame-type-card">
+        <h3>ФК — роль</h3>
+        <p>Роли пользователей в системе</p>
+        <ul>
+          <li>Заказчик</li>
+          <li>Компаньон</li>
+          <li>Модератор</li>
+          <li>Администратор</li>
+        </ul>
+      </div>
+      
+      <div class="frame-type-card">
+        <h3>ФК — прецедент</h3>
+        <p>Сценарии использования системы</p>
+        <ul>
+          <li>Регистрация нового пользователя</li>
+          <li>Поиск компаньона по критериям</li>
+          <li>Оформление бронирования</li>
+          <li>Оплата услуги</li>
+        </ul>
+      </div>
+      
+      <div class="frame-type-card">
+        <h3>ФК — класс</h3>
+        <p>Классы объектов системы</p>
+        <ul>
+          <li>Класс User</li>
+          <li>Класс Booking</li>
+          <li>Класс Payment</li>
+          <li>Класс Review</li>
+        </ul>
+      </div>
+      
+      <div class="frame-type-card">
+        <h3>ФК — объект</h3>
+        <p>Конкретные экземпляры классов</p>
+        <ul>
+          <li>Объект user_123</li>
+          <li>Объект booking_456</li>
+          <li>Объект payment_789</li>
+          <li>Объект review_012</li>
+        </ul>
+      </div>
+      
+      <div class="frame-type-card">
+        <h3>Отношения между классами</h3>
+        <p>Связи между классами системы</p>
+        <ul>
+          <li>Наследование</li>
+          <li>Ассоциация</li>
+          <li>Агрегация</li>
+          <li>Композиция</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Примеры фрейм-моделей системы</h2>
+    
+    <div class="frame-examples">
+      <div class="frame-example">
+        <h3>1. Фрейм "Контент" (Frame Content)</h3>
+        <img src="./diagrams/frame_content.png" alt="Frame Content">
+        
+        <div class="frame-details">
+          <h4>Структура фрейма:</h4>
+          <pre>
+Фрейм: Content
+Слоты:
+  - id: Уникальный идентификатор
+  - type: Тип контента (profile, review, photo)
+  - owner: Владелец контента (User.id)
+  - created_at: Дата создания
+  - updated_at: Дата обновления
+  - status: Статус (draft, published, archived)
+  - visibility: Видимость (public, private, friends)
+  - metadata: Дополнительные метаданные
+  
+Наследование:
+  Content → ProfileContent
+  Content → ReviewContent
+  Content → PhotoContent
+  
+Пример объекта:
+  Content_001:
+    id: "cont_001"
+    type: "profile"
+    owner: "user_123"
+    created_at: "2025-01-15 10:30:00"
+    status: "published"
+    visibility: "public"
+          </pre>
+        </div>
+      </div>
+      
+      <div class="frame-example">
+        <h3>2. Фрейм "Роль" (Frame Role)</h3>
+        <img src="./diagrams/frame_role.png" alt="Frame Role">
+        
+        <div class="frame-details">
+          <h4>Структура фрейма:</h4>
+          <pre>
+Фрейм: Role
+Слоты:
+  - role_id: Идентификатор роли
+  - role_name: Название роли
+  - permissions: Список разрешений
+  - description: Описание роли
+  - hierarchy_level: Уровень в иерархии
+  - parent_role: Родительская роль
+  - default_settings: Настройки по умолчанию
+  
+Конкретные роли:
+  Role_Customer:
+    role_id: "role_001"
+    role_name: "Заказчик"
+    permissions: ["search", "book", "review"]
+    hierarchy_level: 1
+    
+  Role_Companion:
+    role_id: "role_002"
+    role_name: "Компаньон"
+    permissions: ["create_profile", "accept_booking", "receive_payment"]
+    hierarchy_level: 1
+    
+  Role_Admin:
+    role_id: "role_003"
+    role_name: "Администратор"
+    permissions: ["all"]
+    hierarchy_level: 3
+    parent_role: null
+          </pre>
+        </div>
+      </div>
+      
+      <div class="frame-example">
+        <h3>3. Фрейм "Класс" (Frame Class)</h3>
+        <img src="./diagrams/frame_class.png" alt="Frame Class">
+        
+        <div class="frame-details">
+          <h4>Структура фрейма:</h4>
+          <pre>
+Фрейм: Class
+Слоты:
+  - class_name: Имя класса
+  - attributes: Атрибуты класса
+  - methods: Методы класса
+  - parent_class: Родительский класс
+  - interfaces: Реализуемые интерфейсы
+  - access_modifier: Модификатор доступа
+  - is_abstract: Абстрактный класс?
+  
+Пример класса User:
+  class_name: "User"
+  attributes:
+    - id: String
+    - email: String
+    - password_hash: String
+    - created_at: DateTime
+  methods:
+    - register(): Boolean
+    - login(): Session
+    - logout(): Void
+    - updateProfile(): Boolean
+  parent_class: null
+  is_abstract: false
+
+Наследование:
+  User → Customer
+  User → Companion
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Дополнительные фрейм-модели</h2>
+    
+    <div class="additional-frames">
+      <div class="additional-frame">
+        <h3>Фрейм "Бизнес-процесс"</h3>
+        <pre>
+Фрейм: BusinessProcess
+Слоты:
+  - process_id: Идентификатор процесса
+  - process_name: Название процесса
+  - description: Описание процесса
+  - steps: Шаги выполнения
+  - actors: Участники процесса
+  - inputs: Входные данные
+  - outputs: Выходные данные
+  - exceptions: Исключительные ситуации
+  
+Пример: Process_Booking
+  process_id: "proc_001"
+  process_name: "Бронирование встречи"
+  steps: ["select_companion", "choose_time", "confirm_booking", "process_payment"]
+  actors: ["Customer", "Companion", "PaymentSystem"]
+  inputs: ["companion_id", "datetime", "customer_id"]
+  outputs: ["booking_id", "payment_confirmation"]
+        </pre>
+      </div>
+      
+      <div class="additional-frame">
+        <h3>Фрейм "Данные"</h3>
+        <pre>
+Фрейм: Data
+Слоты:
+  - data_id: Идентификатор данных
+  - data_type: Тип данных
+  - format: Формат данных
+  - size: Размер данных
+  - source: Источник данных
+  - destination: Назначение данных
+  - sensitivity: Чувствительность данных
+  - retention_period: Период хранения
+  
+Пример: CustomerProfileData
+  data_id: "data_001"
+  data_type: "structured"
+  format: "JSON"
+  size: "2-5 KB"
+  source: "User registration form"
+  destination: "Users database"
+  sensitivity: "PII (Personal Identifiable Information)"
+  retention_period: "5 years after account deletion"
+        </pre>
+      </div>
+      
+      <div class="additional-frame">
+        <h3>Фрейм "Взаимодействие"</h3>
+        <pre>
+Фрейм: Interaction
+Слоты:
+  - interaction_id: Идентификатор взаимодействия
+  - from: Отправитель
+  - to: Получатель
+  - message_type: Тип сообщения
+  - content: Содержание
+  - timestamp: Временная метка
+  - status: Статус доставки
+  - response_required: Требуется ответ?
+  
+Пример: ChatMessage
+  interaction_id: "msg_001"
+  from: "user_123"
+  to: "user_456"
+  message_type: "text"
+  content: "Привет! Когда можем встретиться?"
+  timestamp: "2025-01-15 14:30:00"
+  status: "delivered"
+  response_required: true
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Иерархия фреймов системы «Компаньон»</h2>
+    
+    <div class="frame-hierarchy">
+      <h3>Основные категории фреймов:</h3>
+      
+      <div class="hierarchy-level">
+        <h4>Уровень 1: Сущности (Entities)</h4>
+        <ul>
+          <li>User (Пользователь)
+            <ul>
+              <li>Customer (Заказчик)</li>
+              <li>Companion (Компаньон)</li>
+              <li>Admin (Администратор)</li>
+            </ul>
+          </li>
+          <li>Content (Контент)
+            <ul>
+              <li>Profile (Профиль)</li>
+              <li>Review (Отзыв)</li>
+              <li>Photo (Фотография)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="hierarchy-level">
+        <h4>Уровень 2: Процессы (Processes)</h4>
+        <ul>
+          <li>RegistrationProcess (Процесс регистрации)</li>
+          <li>SearchProcess (Процесс поиска)</li>
+          <li>BookingProcess (Процесс бронирования)</li>
+          <li>PaymentProcess (Процесс оплаты)</li>
+        </ul>
+      </div>
+      
+      <div class="hierarchy-level">
+        <h4>Уровень 3: Данные (Data)</h4>
+        <ul>
+          <li>UserData (Данные пользователя)</li>
+          <li>BookingData (Данные бронирования)</li>
+          <li>PaymentData (Платежные данные)</li>
+          <li>AnalyticsData (Аналитические данные)</li>
+        </ul>
+      </div>
+      
+      <div class="hierarchy-level">
+        <h4>Уровень 4: Взаимодействия (Interactions)</h4>
+        <ul>
+          <li>UserSystemInteraction (Взаимодействие пользователь-система)</li>
+          <li>UserUserInteraction (Взаимодействие пользователь-пользователь)</li>
+          <li>SystemExternalInteraction (Взаимодействие система-внешние сервисы)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Применение фрейм-моделей в разработке</h2>
+    
+    <div class="frame-applications">
+      <div class="application">
+        <h3>Проектирование базы данных</h3>
+        <p>Фреймы "Класс" и "Объект" напрямую преобразуются в таблицы БД и записи в них.</p>
+        <p><strong>Пример:</strong> Фрейм User → Таблица users в PostgreSQL</p>
+      </div>
+      
+      <div class="application">
+        <h3>Разработка API</h3>
+        <p>Фреймы "Взаимодействие" определяют форматы запросов и ответов REST API.</p>
+        <p><strong>Пример:</strong> Фрейм BookingProcess → POST /api/bookings endpoint</p>
+      </div>
+      
+      <div class="application">
+        <h3>Создание интерфейса</h3>
+        <p>Фреймы "Роль" и "Контент" определяют, какие элементы интерфейса видны разным пользователям.</p>
+        <p><strong>Пример:</strong> Фрейм Role_Companion → Кнопка "Принять заявку" в интерфейсе</p>
+      </div>
+      
+      <div class="application">
+        <h3>Тестирование</h3>
+        <p>Фреймы "Прецедент" служат основой для тестовых сценариев и use case тестирования.</p>
+        <p><strong>Пример:</strong> Фрейм RegistrationProcess → Тест регистрации нового пользователя</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="frames-conclusion">
+    <h2>Заключение по фреймовому моделированию</h2>
+    
+    <p>Фрейм-модели системы «Компаньон» предоставляют:</p>
+    
+    <div class="conclusion-points">
+      <div class="point">
+        <h3>Полноту описания</h3>
+        <p>Все аспекты системы описаны через взаимосвязанные фреймы</p>
+      </div>
+      
+      <div class="point">
+        <h3>Структурированность</h3>
+        <p>Четкая иерархия и организация знаний о системе</p>
+      </div>
+      
+      <div class="point">
+        <h3>Практическую пользу</h3>
+        <p>Непосредственное применение в разработке, тестировании и документировании</p>
+      </div>
+      
+      <div class="point">
+        <h3>Масштабируемость</h3>
+        <p>Легкость добавления новых фреймов при развитии системы</p>
+      </div>
+    </div>
+    
+    <p class="final-note"><strong>Фреймовое моделирование является ключевым инструментом</strong> для понимания, проектирования и реализации сложной системы «Компаньон», обеспечивая единый язык и структуру для всех участников проекта.</p>
   </section>
 </main>
-<footer>© 2025 Компаньон</footer>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 Фрейм-модели системы «Компаньон» | Малюга Валерия Васильевна (1132236050, НФИбд-01-23)</p>
+    <p>Модели созданы с использованием фреймового подхода к представлению знаний</p>
+  </div>
+</footer>
 </body>
 </html>
