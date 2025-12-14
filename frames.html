@@ -5,6 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Компаньон — Фрейм-модели</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили для фрейм-моделей */
+        .frame-example {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .frame-image {
+            text-align: center;
+            margin: 1.5rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 2px solid #4a90e2;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .frame-diagram {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .diagram-title {
+            font-weight: bold;
+            color: #2c6cb0;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        .frame-structure {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            border: 1px solid #ddd;
+        }
+        
+        .frame-structure h4 {
+            color: #2c6cb0;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 0.5rem;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #d1e3ff;
+        }
+        
+        .benefit h3 {
+            color: #2c6cb0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .frame-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .frame-type {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .frame-type h3 {
+            color: #2c6cb0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .frame-type ul {
+            padding-left: 1.5rem;
+        }
+        
+        .frame-type li {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+        
+        .additional-frames {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .additional-frame {
+            background: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #d1e3ff;
+        }
+        
+        .additional-frame h3 {
+            color: #2c6cb0;
+            margin-bottom: 1rem;
+        }
+        
+        .hierarchy {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .level {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+        }
+        
+        .level h3 {
+            color: #2c6cb0;
+            margin-bottom: 1rem;
+        }
+        
+        .level ul ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -31,15 +184,15 @@
             <div class="benefits">
                 <div class="benefit">
                     <h3>Структурированность</h3>
-                    <p>Четкая организация знаний</p>
+                    <p>Четкая организация знаний в виде иерархических структур</p>
                 </div>
                 <div class="benefit">
                     <h3>Иерархичность</h3>
-                    <p>Возможность наследования свойств</p>
+                    <p>Возможность наследования свойств между фреймами</p>
                 </div>
                 <div class="benefit">
                     <h3>Модульность</h3>
-                    <p>Независимое описание компонентов</p>
+                    <p>Независимое описание компонентов системы</p>
                 </div>
             </div>
         </section>
@@ -55,6 +208,7 @@
                         <li>Поиск компаньонов</li>
                         <li>Бронирование встреч</li>
                         <li>Обработка платежей</li>
+                        <li>Управление профилями</li>
                     </ul>
                 </div>
                 
@@ -64,6 +218,7 @@
                         <li>Пользователь</li>
                         <li>Платежная система</li>
                         <li>СМС-сервис</li>
+                        <li>Email-сервис</li>
                     </ul>
                 </div>
                 
@@ -73,6 +228,7 @@
                         <li>База пользователей</li>
                         <li>Таблица заказов</li>
                         <li>Архив отзывов</li>
+                        <li>Логи операций</li>
                     </ul>
                 </div>
                 
@@ -82,6 +238,7 @@
                         <li>Запрос на поиск</li>
                         <li>Ответ с результатами</li>
                         <li>Платежная транзакция</li>
+                        <li>Уведомления</li>
                     </ul>
                 </div>
                 
@@ -91,6 +248,7 @@
                         <li>Заказчик</li>
                         <li>Компаньон</li>
                         <li>Администратор</li>
+                        <li>Модератор</li>
                     </ul>
                 </div>
                 
@@ -100,116 +258,137 @@
                         <li>Регистрация пользователя</li>
                         <li>Поиск компаньона</li>
                         <li>Оформление бронирования</li>
+                        <li>Оплата услуг</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- Примеры фреймов -->
-<section class="examples-section">
-    <h2>Примеры фрейм-моделей</h2>
-    
-    <!-- Фрейм Content -->
-    <div class="frame-example">
-        <h3>Фрейм "Content" (Контент)</h3>
-        <div class="frame-image">
-            <div class="diagram-placeholder" id="contentDiagram">
-                <div class="placeholder-content">
-                    <div class="placeholder-title">Frame Content Diagram</div>
-                    <div class="placeholder-structure">
-                        <strong>Структура фрейма:</strong><br>
-                        id: Уникальный идентификатор<br>
-                        type: Тип контента<br>
-                        owner: Владелец<br>
-                        status: Статус<br>
-                        visibility: Видимость
+        <section class="examples-section">
+            <h2>Примеры фрейм-моделей</h2>
+            
+            <!-- Фрейм Content -->
+            <div class="frame-example">
+                <h3>Фрейм "Content" (Контент)</h3>
+                <div class="frame-image">
+                    <div class="diagram-title">Frame Content Diagram</div>
+                    <div style="width: 100%; max-width: 600px; margin: 0 auto; background: #f0f7ff; padding: 20px; border-radius: 6px; border: 2px solid #4a90e2;">
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <strong style="color: #2c6cb0; font-size: 1.2rem;">Фрейм: Content</strong>
+                        </div>
+                        <div style="font-family: monospace; background: white; padding: 15px; border-radius: 4px; border: 1px solid #ddd;">
+                            <strong>Слоты:</strong><br>
+                            • id: Уникальный идентификатор<br>
+                            • type: Тип контента<br>
+                            • owner: Владелец<br>
+                            • status: Статус<br>
+                            • visibility: Видимость<br>
+                            • created_at: Дата создания<br>
+                            • updated_at: Дата обновления
+                        </div>
                     </div>
+                    <div class="image-caption">Схематическое представление фрейма "Content"</div>
                 </div>
-            </div>
-            <div class="image-caption">Графическое представление фрейма "Content"</div>
-        </div>
-        
-        <div class="frame-structure">
-            <h4>Структура:</h4>
-            <pre>
+                
+                <div class="frame-structure">
+                    <h4>Структура фрейма:</h4>
+                    <pre>
 Фрейм: Content
 Слоты:
-  - id: Уникальный идентификатор
-  - type: Тип контента
-  - owner: Владелец
-  - status: Статус
-  - visibility: Видимость
-            </pre>
-        </div>
-    </div>
-    
-    <!-- Фрейм Role -->
-    <div class="frame-example">
-        <h3>Фрейм "Role" (Роль)</h3>
-        <div class="frame-image">
-            <div class="diagram-placeholder" id="roleDiagram">
-                <div class="placeholder-content">
-                    <div class="placeholder-title">Frame Role Diagram</div>
-                    <div class="placeholder-structure">
-                        <strong>Структура фрейма:</strong><br>
-                        role_id: Идентификатор<br>
-                        role_name: Название<br>
-                        permissions: Разрешения<br>
-                        hierarchy_level: Уровень
-                    </div>
+  - id: Уникальный идентификатор (тип: integer, ключ)
+  - type: Тип контента (значения: profile, review, photo, message)
+  - owner: Владелец (ссылка на User)
+  - status: Статус (значения: active, hidden, deleted, pending)
+  - visibility: Видимость (значения: public, private, friends_only)
+  - created_at: Дата создания (тип: timestamp)
+  - updated_at: Дата обновления (тип: timestamp)
+                    </pre>
                 </div>
             </div>
-            <div class="image-caption">Графическое представление фрейма "Role"</div>
-        </div>
-        
-        <div class="frame-structure">
-            <h4>Структура:</h4>
-            <pre>
+            
+            <!-- Фрейм Role -->
+            <div class="frame-example">
+                <h3>Фрейм "Role" (Роль)</h3>
+                <div class="frame-image">
+                    <div class="diagram-title">Frame Role Diagram</div>
+                    <div style="width: 100%; max-width: 600px; margin: 0 auto; background: #e8f4ff; padding: 20px; border-radius: 6px; border: 2px solid #2c6cb0;">
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <strong style="color: #2c6cb0; font-size: 1.2rem;">Фрейм: Role</strong>
+                        </div>
+                        <div style="font-family: monospace; background: white; padding: 15px; border-radius: 4px; border: 1px solid #ddd;">
+                            <strong>Слоты:</strong><br>
+                            • role_id: Идентификатор<br>
+                            • role_name: Название<br>
+                            • permissions: Разрешения<br>
+                            • hierarchy_level: Уровень<br>
+                            • description: Описание<br>
+                            • is_active: Активна<br>
+                            • created_by: Создатель
+                        </div>
+                    </div>
+                    <div class="image-caption">Схематическое представление фрейма "Role"</div>
+                </div>
+                
+                <div class="frame-structure">
+                    <h4>Структура фрейма:</h4>
+                    <pre>
 Фрейм: Role
 Слоты:
-  - role_id: Идентификатор
-  - role_name: Название
-  - permissions: Разрешения
-  - hierarchy_level: Уровень
-            </pre>
-        </div>
-    </div>
-    
-    <!-- Фрейм Class -->
-    <div class="frame-example">
-        <h3>Фрейм "Class" (Класс)</h3>
-        <div class="frame-image">
-            <div class="diagram-placeholder" id="classDiagram">
-                <div class="placeholder-content">
-                    <div class="placeholder-title">Frame Class Diagram</div>
-                    <div class="placeholder-structure">
-                        <strong>Структура фрейма:</strong><br>
-                        class_name: Имя класса<br>
-                        attributes: Атрибуты<br>
-                        methods: Методы<br>
-                        parent_class: Родительский класс
-                    </div>
+  - role_id: Идентификатор (тип: string, ключ)
+  - role_name: Название (тип: string, обязательный)
+  - permissions: Разрешения (тип: array, значения: read, write, delete, manage)
+  - hierarchy_level: Уровень (тип: integer, диапазон: 1-10)
+  - description: Описание (тип: text, необязательный)
+  - is_active: Активна (тип: boolean, default: true)
+  - created_by: Создатель (ссылка на User)
+                    </pre>
                 </div>
             </div>
-            <div class="image-caption">Графическое представление фрейма "Class"</div>
-        </div>
-        
-        <div class="frame-structure">
-            <h4>Структура:</h4>
-            <pre>
+            
+            <!-- Фрейм Class -->
+            <div class="frame-example">
+                <h3>Фрейм "Class" (Класс)</h3>
+                <div class="frame-image">
+                    <div class="diagram-title">Frame Class Diagram</div>
+                    <div style="width: 100%; max-width: 600px; margin: 0 auto; background: #f0fff4; padding: 20px; border-radius: 6px; border: 2px solid #28a745;">
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <strong style="color: #28a745; font-size: 1.2rem;">Фрейм: Class</strong>
+                        </div>
+                        <div style="font-family: monospace; background: white; padding: 15px; border-radius: 4px; border: 1px solid #ddd;">
+                            <strong>Слоты:</strong><br>
+                            • class_name: Имя класса<br>
+                            • attributes: Атрибуты<br>
+                            • methods: Методы<br>
+                            • parent_class: Родительский класс<br>
+                            • interfaces: Интерфейсы<br>
+                            • access_modifier: Модификатор доступа<br>
+                            • is_abstract: Абстрактный
+                        </div>
+                    </div>
+                    <div class="image-caption">Схематическое представление фрейма "Class"</div>
+                </div>
+                
+                <div class="frame-structure">
+                    <h4>Структура фрейма:</h4>
+                    <pre>
 Фрейм: Class
 Слоты:
-  - class_name: Имя класса
-  - attributes: Атрибуты
-  - methods: Методы
-  - parent_class: Родительский класс
-            </pre>
-        </div>
-    </div>
-</section>
+  - class_name: Имя класса (тип: string, обязательный)
+  - attributes: Атрибуты (тип: array объектов Attribute)
+  - methods: Методы (тип: array объектов Method)
+  - parent_class: Родительский класс (тип: string, ссылка на Class)
+  - interfaces: Интерфейсы (тип: array, ссылки на Interface)
+  - access_modifier: Модификатор доступа (значения: public, private, protected)
+  - is_abstract: Абстрактный (тип: boolean, default: false)
+                    </pre>
+                </div>
+            </div>
+        </section>
+
         <!-- Дополнительные фреймы -->
         <section class="additional-section">
-            <h2>Дополнительные фреймы</h2>
+            <h2>Дополнительные фреймы системы</h2>
             
             <div class="additional-frames">
                 <div class="additional-frame">
@@ -217,12 +396,17 @@
                     <pre>
 Фрейм: BusinessProcess
 Слоты:
-  - process_id: Идентификатор
-  - process_name: Название
-  - steps: Шаги выполнения
-  - actors: Участники
-  - inputs: Входные данные
-  - outputs: Выходные данные
+  - process_id: Идентификатор процесса
+  - process_name: Название процесса
+  - description: Описание процесса
+  - steps: Шаги выполнения (array)
+  - actors: Участники процесса (array)
+  - inputs: Входные данные (array)
+  - outputs: Выходные данные (array)
+  - triggers: Триггеры запуска (array)
+  - constraints: Ограничения (array)
+  - success_criteria: Критерии успеха
+  - version: Версия процесса
                     </pre>
                 </div>
                 
@@ -231,11 +415,16 @@
                     <pre>
 Фрейм: Data
 Слоты:
-  - data_id: Идентификатор
-  - data_type: Тип данных
-  - format: Формат
-  - size: Размер
-  - sensitivity: Чувствительность
+  - data_id: Идентификатор данных
+  - data_name: Название данных
+  - data_type: Тип данных (string, integer, boolean, etc.)
+  - format: Формат данных (JSON, XML, CSV, etc.)
+  - size: Размер данных (в байтах)
+  - sensitivity: Чувствительность (public, confidential, secret)
+  - retention_period: Срок хранения (в днях)
+  - owner: Владелец данных
+  - source: Источник данных
+  - validation_rules: Правила валидации
                     </pre>
                 </div>
                 
@@ -244,60 +433,101 @@
                     <pre>
 Фрейм: Interaction
 Слоты:
-  - interaction_id: Идентификатор
-  - from: Отправитель
-  - to: Получатель
-  - message_type: Тип сообщения
-  - content: Содержание
+  - interaction_id: Идентификатор взаимодействия
+  - interaction_type: Тип взаимодействия (message, call, meeting)
+  - from: Отправитель/Инициатор
+  - to: Получатель/Участник
+  - message_type: Тип сообщения (text, voice, video)
+  - content: Содержание взаимодействия
+  - timestamp: Временная метка
+  - status: Статус (sent, delivered, read, failed)
+  - duration: Длительность (в секундах)
+  - channel: Канал связи (web, mobile, email)
                     </pre>
                 </div>
             </div>
         </section>
 
-        <!-- Иерархия -->
+        <!-- Иерархия фреймов -->
         <section class="hierarchy-section">
-            <h2>Иерархия фреймов</h2>
+            <h2>Иерархия фреймов системы "Компаньон"</h2>
             
             <div class="hierarchy">
                 <div class="level">
-                    <h3>Уровень 1: Сущности</h3>
+                    <h3>Уровень 1: Сущности (Entities)</h3>
                     <ul>
-                        <li>User (Пользователь)
+                        <li><strong>User</strong> (Пользователь)
                             <ul>
                                 <li>Customer (Заказчик)</li>
                                 <li>Companion (Компаньон)</li>
                                 <li>Admin (Администратор)</li>
+                                <li>Moderator (Модератор)</li>
                             </ul>
                         </li>
-                        <li>Content (Контент)
+                        <li><strong>Content</strong> (Контент)
                             <ul>
-                                <li>Profile (Профиль)</li>
-                                <li>Review (Отзыв)</li>
-                                <li>Photo (Фотография)</li>
+                                <li>Profile (Профиль пользователя)</li>
+                                <li>Review (Отзыв о встрече)</li>
+                                <li>Photo (Фотография профиля)</li>
+                                <li>Message (Личное сообщение)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Service</strong> (Услуга)
+                            <ul>
+                                <li>Activity (Вид активности)</li>
+                                <li>Category (Категория услуги)</li>
+                                <li>Pricing (Ценообразование)</li>
                             </ul>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="level">
-                    <h3>Уровень 2: Процессы</h3>
+                    <h3>Уровень 2: Процессы (Processes)</h3>
                     <ul>
-                        <li>RegistrationProcess</li>
-                        <li>SearchProcess</li>
-                        <li>BookingProcess</li>
-                        <li>PaymentProcess</li>
+                        <li><strong>RegistrationProcess</strong> (Процесс регистрации)</li>
+                        <li><strong>SearchProcess</strong> (Процесс поиска компаньона)</li>
+                        <li><strong>BookingProcess</strong> (Процесс бронирования)</li>
+                        <li><strong>PaymentProcess</strong> (Процесс оплаты)</li>
+                        <li><strong>VerificationProcess</strong> (Процесс верификации)</li>
+                        <li><strong>ReviewProcess</strong> (Процесс оценки и отзыва)</li>
+                        <li><strong>SupportProcess</strong> (Процесс поддержки)</li>
                     </ul>
                 </div>
                 
                 <div class="level">
-                    <h3>Уровень 3: Данные</h3>
+                    <h3>Уровень 3: Данные и интерфейсы</h3>
                     <ul>
-                        <li>UserData</li>
-                        <li>BookingData</li>
-                        <li>PaymentData</li>
-                        <li>AnalyticsData</li>
+                        <li><strong>UserData</strong> (Данные пользователя)</li>
+                        <li><strong>BookingData</strong> (Данные бронирования)</li>
+                        <li><strong>PaymentData</strong> (Данные платежей)</li>
+                        <li><strong>AnalyticsData</strong> (Данные аналитики)</li>
+                        <li><strong>API_Interface</strong> (API интерфейсы)</li>
+                        <li><strong>UI_Component</strong> (Компоненты интерфейса)</li>
+                        <li><strong>Notification</strong> (Уведомления)</li>
                     </ul>
                 </div>
+            </div>
+            
+            <div class="frame-structure" style="margin-top: 2rem;">
+                <h4>Принципы наследования в иерархии фреймов:</h4>
+                <pre>
+1. Все фреймы наследуют базовые слоты:
+   - id: уникальный идентификатор
+   - created_at: дата создания
+   - updated_at: дата обновления
+   - status: текущий статус
+
+2. Специализированные фреймы добавляют специфические слоты:
+   - User → Customer: добавлены booking_history, preferences
+   - User → Companion: добавлены skills, availability, rating
+   - Content → Profile: добавлены personal_info, interests
+   - Content → Review: добавлены rating, meeting_id
+
+3. Процессные фреймы наследуют:
+   - BusinessProcess → все конкретные процессы
+   - Каждый процесс определяет свои шаги, участников, данные
+                </pre>
             </div>
         </section>
     </main>
@@ -305,7 +535,7 @@
     <footer>
         <div class="footer-content">
             <p>© 2025 Фрейм-модели «Компаньон» | Малюга Валерия Васильевна (1132236050, НФИбд-01-23)</p>
-            <p>Модели созданы с использованием фреймового подхода</p>
+            <p>Модели созданы с использованием фреймового подхода для структурного представления системы</p>
         </div>
     </footer>
 </body>
