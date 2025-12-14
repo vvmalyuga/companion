@@ -112,24 +112,26 @@
     <!-- Фрейм Content -->
     <div class="frame-example">
         <h3>Фрейм "Content" (Контент)</h3>
-        <img src="diagrams/frame_content.png" alt="Frame Content Diagram">
-        ...
-    </div>
-    
-    <!-- Фрейм Role -->
-    <div class="frame-example">
-        <h3>Фрейм "Role" (Роль)</h3>
-        <img src="diagrams/uml_roles.png" alt="Frame Role Diagram">
-        ...
-    </div>
-    
-    <!-- Фрейм Class -->
-    <div class="frame-example">
-        <h3>Фрейм "Class" (Класс)</h3>
-        <img src="diagrams/frame_class.png" alt="Frame Class Diagram">
-        ...
-    </div>
-</section>
+        <div class="frame-image">
+            <div class="diagram-placeholder" id="contentDiagram">
+                <div class="placeholder-content">
+                    <div class="placeholder-title">Frame Content Diagram</div>
+                    <div class="placeholder-structure">
+                        <strong>Структура фрейма:</strong><br>
+                        id: Уникальный идентификатор<br>
+                        type: Тип контента<br>
+                        owner: Владелец<br>
+                        status: Статус<br>
+                        visibility: Видимость
+                    </div>
+                </div>
+            </div>
+            <div class="image-caption">Графическое представление фрейма "Content"</div>
+        </div>
+        
+        <div class="frame-structure">
+            <h4>Структура:</h4>
+            <pre>
 Фрейм: Content
 Слоты:
   - id: Уникальный идентификатор
@@ -137,47 +139,74 @@
   - owner: Владелец
   - status: Статус
   - visibility: Видимость
-                    </pre>
+            </pre>
+        </div>
+    </div>
+    
+    <!-- Фрейм Role -->
+    <div class="frame-example">
+        <h3>Фрейм "Role" (Роль)</h3>
+        <div class="frame-image">
+            <div class="diagram-placeholder" id="roleDiagram">
+                <div class="placeholder-content">
+                    <div class="placeholder-title">Frame Role Diagram</div>
+                    <div class="placeholder-structure">
+                        <strong>Структура фрейма:</strong><br>
+                        role_id: Идентификатор<br>
+                        role_name: Название<br>
+                        permissions: Разрешения<br>
+                        hierarchy_level: Уровень
+                    </div>
                 </div>
             </div>
-            
-            <!-- Фрейм Role -->
-            <div class="frame-example">
-                <h3>Фрейм "Role" (Роль)</h3>
-                <img src="https://via.placeholder.com/800x300/2c6cb0/ffffff?text=Frame+Role+Diagram" alt="Frame Role Diagram">
-                
-                <div class="frame-structure">
-                    <h4>Структура:</h4>
-                    <pre>
+            <div class="image-caption">Графическое представление фрейма "Role"</div>
+        </div>
+        
+        <div class="frame-structure">
+            <h4>Структура:</h4>
+            <pre>
 Фрейм: Role
 Слоты:
   - role_id: Идентификатор
   - role_name: Название
   - permissions: Разрешения
   - hierarchy_level: Уровень
-                    </pre>
+            </pre>
+        </div>
+    </div>
+    
+    <!-- Фрейм Class -->
+    <div class="frame-example">
+        <h3>Фрейм "Class" (Класс)</h3>
+        <div class="frame-image">
+            <div class="diagram-placeholder" id="classDiagram">
+                <div class="placeholder-content">
+                    <div class="placeholder-title">Frame Class Diagram</div>
+                    <div class="placeholder-structure">
+                        <strong>Структура фрейма:</strong><br>
+                        class_name: Имя класса<br>
+                        attributes: Атрибуты<br>
+                        methods: Методы<br>
+                        parent_class: Родительский класс
+                    </div>
                 </div>
             </div>
-            
-            <!-- Фрейм Class -->
-            <div class="frame-example">
-                <h3>Фрейм "Class" (Класс)</h3>
-                <img src="https://via.placeholder.com/800x300/28a745/ffffff?text=Frame+Class+Diagram" alt="Frame Class Diagram">
-                
-                <div class="frame-structure">
-                    <h4>Структура:</h4>
-                    <pre>
+            <div class="image-caption">Графическое представление фрейма "Class"</div>
+        </div>
+        
+        <div class="frame-structure">
+            <h4>Структура:</h4>
+            <pre>
 Фрейм: Class
 Слоты:
   - class_name: Имя класса
   - attributes: Атрибуты
   - methods: Методы
   - parent_class: Родительский класс
-                    </pre>
-                </div>
-            </div>
-        </section>
-
+            </pre>
+        </div>
+    </div>
+</section>
         <!-- Дополнительные фреймы -->
         <section class="additional-section">
             <h2>Дополнительные фреймы</h2>
