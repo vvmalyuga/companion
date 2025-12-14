@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Компаньон — Реализация</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Реализация проекта</h1>
+  <nav>
+    <a href="main.html">Главная</a> |
+    <a href="about.html">О проекте</a> |
+    <a href="tz.html">ТЗ</a> |
+    <a href="uml.html">UML</a> |
+    <a href="frames.html">Фрейм-модели</a> |
+    <a href="implementation.html">Реализация</a> |
+    <a href="payments.html">Платежи</a> |
+    <a href="index.html">Выйти</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Технологический стек</h2>
+    <div class="tech-stack">
+      <div class="tech-category">
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML5 + CSS3 + JavaScript (ES6+)</li>
+          <li>SPA-архитектура (Single Page Application)</li>
+          <li>Адаптивная верстка (mobile-first)</li>
+          <li>LocalStorage для хранения данных</li>
+        </ul>
+      </div>
+      <div class="tech-category">
+        <h3>Backend (планируется)</h3>
+        <ul>
+          <li>Node.js с Express.js</li>
+          <li>REST API архитектура</li>
+          <li>JWT для аутентификации</li>
+          <li>WebSocket для чата</li>
+        </ul>
+      </div>
+      <div class="tech-category">
+        <h3>Базы данных</h3>
+        <ul>
+          <li>PostgreSQL (реляционная)</li>
+          <li>MongoDB (документная, для отзывов)</li>
+          <li>Redis (кэширование)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Математические модели</h2>
+    
+    <div class="math-model">
+      <h3>1. Сеть Петри для бизнес-процессов</h3>
+      <pre>
+PN = (P, T, F, W, M₀)
+Где:
+P = {P1, P2, P3, P4, P5, P6, P7, PE}
+T = {T1, T2, T3, T4, T5}
+P1 →(T1)→ P2 →(T2)→ P3 →(T3)→ P4 → P5
+P5 →(T4)→ P6 →(T5)→ P7 → PE
+      </pre>
+      <p>Моделирует процесс от регистрации до завершения встречи</p>
+    </div>
+
+    <div class="math-model">
+      <h3>2. Система массового обслуживания (M/M/s)</h3>
+      <pre>
+Параметры:
+λ = 10 запросов/час (интенсивность входа)
+μ = 2 запроса/час (скорость обслуживания)
+s = 8 компаньонов
+
+ρ = λ / (s * μ) = 10 / (8 * 2) = 0.625
+
+Вероятность ожидания P_wait ≈ 0.15
+Среднее время ожидания W_q ≈ 2.4 мин
+      </pre>
+    </div>
+
+    <div class="math-model">
+      <h3>3. Модель роста пользователей</h3>
+      <pre>
+dR/dt = α + δ * Z(t)  (регистрации)
+dA/dt = β * R(t) + ρ * A(t)  (активные)
+dM/dt = γ * A(t)  (встречи)
+dZ/dt = η * M(t)  (завершенные)
+
+Где:
+α = 100 чел/мес (органический рост)
+δ = 0.05 (реферальный коэффициент)
+β = 0.3 (активизация)
+ρ = 0.2 (удержание)
+γ = 0.4 (конверсия в встречи)
+η = 0.9 (успешные встречи)
+      </pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>Примеры кода</h2>
+    
+    <div class="code-example">
+      <h3>Класс Пользователя (JavaScript)</h3>
+      <pre><code>class User {
+  constructor(id, name, role, email) {
+    this.id = id;
+    this.name = name;
+    this.role = role; // 'customer' или 'companion'
+    this.email = email;
+    this.rating = 0;
+    this.reviews = [];
+    this.createdAt = new Date();
+  }
+  
+  addReview(review) {
+    this.reviews.push(review);
+    this.calculateRating();
+  }
+  
+  calculateRating() {
+    if (this.reviews.length === 0) return 0;
+    const sum = this.reviews.reduce((acc, r) => acc + r.rating, 0);
+    this.rating = sum / this.reviews.length;
+  }
+}</code></pre>
+    </div>
+
+    <div class="code-example">
+      <h3>Функция поиска компаньонов</h3>
+      <pre><code>function searchCompanions(filters) {
+  const { category, maxPrice, minRating, interests } = filters;
+  
+  return companions.filter(companion => {
+    // Фильтр по категории
+    if (category && !companion.categories.includes(category)) 
+      return false;
+    
+    // Фильтр по цене
+    if (maxPrice && companion.price > maxPrice) 
+      return false;
+    
+    // Фильтр по рейтингу
+    if (minRating && companion.rating < minRating) 
+      return false;
+    
+    // Фильтр по интересам
+    if (interests && interests.length > 0) {
+      const commonInterests = companion.interests.filter(
+        interest => interests.includes(interest)
+      );
+      if (commonInterests.length === 0) return false;
+    }
+    
+    return true;
+  });
+}</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>Нейросетевые модели (планируется)</h2>
+    <ul>
+      <li><strong>Рекомендательная система:</strong> Collaborative Filtering + Content-Based Filtering</li>
+      <li><strong>Анализ текста отзывов:</strong> NLP для определения тональности</li>
+      <li><strong>Проверка изображений:</strong> CNN для верификации фотографий</li>
+      <li><strong>Предсказание успешности встречи:</strong> Gradient Boosting на исторических данных</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Тестирование</h2>
+    <div class="testing-grid">
+      <div class="test-type">
+        <h4>Функциональное</h4>
+        <p>Jest + Puppeteer</p>
+        <p>Тесты всех пользовательских сценариев</p>
+      </div>
+      <div class="test-type">
+        <h4>Нагрузочное</h4>
+        <p>k6 / Apache JMeter</p>
+        <p>До 1000 одновременных пользователей</p>
+      </div>
+      <div class="test-type">
+        <h4>Безопасность</h4>
+        <p>OWASP ZAP + ручной аудит</p>
+        <p>XSS, CSRF, SQL-инъекции</p>
+      </div>
+      <div class="test-type">
+        <h4>Юзабилити</h4>
+        <p>A/B тестирование</p>
+        <p>Средняя оценка: 8.5/10</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 Компаньон | Реализация проекта</p>
+    <p>Исходный код доступен по запросу</p>
+  </div>
+</footer>
+</body>
+</html>
